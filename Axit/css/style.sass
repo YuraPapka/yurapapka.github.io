@@ -1,0 +1,523 @@
+$orange: #f28537
+
+html
+  width: 100%
+  height: 100%
+
+body
+  width: 100%
+  height: 100%
+
+body, html, ul, li, h1, h2, h3, h4, p
+  margin: 0
+  padding: 0
+  font:
+    family: 'Open Sans', sans-serif
+    weight: 300
+    size: 2vh
+
+.container
+  margin: 0 auto
+  //width: 1800px
+  display: -webkit-flex
+  -webkit-align-items: center
+  -webkit-justify-content: space-between
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &.block
+    display: block
+
+a
+  color: #fff
+  text-decoration: none
+
+.logo__text
+  color: #fff
+  font:
+    family: 'Raleway', sans-serif
+    weight: bold
+  span
+    color: $orange
+    font:
+      weight: 400
+      size: 1em
+
+.divider
+  width: 10vh
+  height: 2px
+  margin: 3vh 0
+  background: $orange
+
+.btn
+  display: inline-block
+  margin-top: 6vh
+  font:
+    family: "Open Sans", sans-serif
+    weight: 600
+    size: 1em
+  padding: 1vh 2vh
+  //width: 120px
+  //height: 35px
+  //line-height: 35px
+  vertical-align: center
+  color: #fff
+  cursor: pointer
+  text-align: center
+  &.btn__white
+    border: 2px solid #fff
+    transition: 0.75s
+    position: relative
+    &:before, &:after
+      content: ''
+      position: absolute
+      top: -2px
+      bottom: -2px
+      left: -2px
+      right: -2px
+      transition: 0.75s
+      z-index: 99
+      border-color: $orange
+    &:before
+      border-top: solid 2px
+      border-bottom: solid 2px
+      transform: scaleX(0)
+    &:after
+      border-left: solid 2px
+      border-right: solid 2px
+      transform: scaleY(0)
+    &:hover
+      color: $orange
+      &:before, &:after
+        transform: scale(1)
+        border-color: $orange
+  &.btn__orange
+    border-radius: 2px
+    background: $orange
+    &:hover
+      box-shadow: 0 3px 10px rgba(0,0,0,0.38)
+
+.form
+  .input
+    border: none
+    height: 1vh
+    border-bottom: 1px solid #d6d6d6
+    color: #989797
+    outline: none
+    padding: 5vh 0 2vh 3%
+    font:
+      family: "OpenSans", sans-serif
+      weight: 400
+      size: 0.88em
+    &:focus
+      outline: none
+      background: #fff
+    &:-webkit-autofill, :-webkit-autofill:hover, :-webkit-autofill:focus, :-webkit-autofill:active
+      -webkit-box-shadow: 0 0 0 30px #fff inset
+      -webkit-text-fill-color: #989797
+    &::placeholder
+      color: #bdbdbd
+h2
+  text-transform: uppercase
+  font:
+    family: 'Raleway', sans-serif
+    size: 2.25em
+    weight: 400
+
+h3
+  font:
+    family: "Open Sans", sans-serif
+    weight: 700
+    size: 1.25em
+
+p
+  font:
+    size: 1em
+    family: 'Raleway', sans-serif
+    weight: 300
+
+.circle
+  color: $orange
+  border: 2px solid $orange
+  $rang: 10vh
+  line-height: $rang
+  width: $rang
+  font:
+    size: $rang/2
+  font-size: 2em
+  -webkit-border-radius: $rang/2
+  -moz-border-radius: $rang/2
+  border-radius: $rang/2
+
+.content__center
+  text-align: center
+  width: 100%
+  margin-bottom: 10vh
+  .divider
+    margin: 3vh auto
+
+.items
+  width: 100%
+  display: flex
+  align-items: flex-start
+  justify-content: space-between
+  .item
+    max-width: 30%
+    text-align: center
+
+.nav__bar
+  position: fixed
+  z-index: 999
+  top: 0
+  width: 100%
+  height: 8vh
+  border-bottom: 2px solid #fff
+  transition: 0.75s
+  &.add__bcg
+    background: rgba(0,0,0,0.95)
+  .logo
+    font:
+      size: 6vh
+    line-height: 8vh
+  .menu
+    display: flex
+    //justify-content: center
+    align-items: center
+    .menu__items
+      display: flex
+      justify-content: flex-end
+      font:
+        family: 'OpenSans', sans-serif
+        weight: 600
+        size: 2vh
+      list-style: none
+      .menu__item
+        position: relative
+        line-height: 8vh
+        padding: 0 2vw
+        transition: 0.75s
+        cursor: pointer
+        border-bottom: 2px solid #fff
+        &:after
+          content: ''
+          position: absolute
+          bottom: -2px
+          left: 0
+          right: 0
+          width: 100%
+          border-bottom: solid 2px $orange
+          transform: scaleX(0)
+          transition: 0.75s
+
+        a
+          display: block
+          height: 8vh
+          width: 100%
+          color: #fff
+          transition: 0.5s
+          cursor: pointer
+        &:hover, &.active
+          &:after, &:before
+            transform: scaleX(1)
+          a
+            color: $orange
+
+    .menu__btn__bcg
+      display: none
+
+.header
+  padding-top: 8vh
+  width: 100%
+  height: 92vh
+  background-size: cover
+  font-size: 2vh
+  .container
+    height: 100%
+  .header__content
+    margin-top: -4vh
+    color: #fff
+    //max-width: 40%
+    width: 100%
+    text-align: center
+    .logo__text
+      font:
+        size: 4em
+      margin-bottom: 4vh
+    .headline
+      font-size: 4em
+      margin-bottom: 4vh
+    .divider
+      margin: 4vh auto
+      background: #fff
+    .header__btn
+      font:
+        size: 1.5em
+  //.sign__up
+  //  position: relative
+  //  max-width: 40%
+  //  height: 50vh
+  //  border-radius: 5px
+  //  background: #fff
+  //  overflow: hidden
+  //
+  //  .free__trial
+  //    width: 100%
+  //    height: 8.5vh
+  //    line-height: 8.5vh
+  //    background: #f5f5f5
+  //    text-align: center
+  //    span
+  //      color: $orange
+  //  .sign__up__input
+  //    width: 75%
+  //    margin-left: 9.5%
+  //
+  //  .sign__up__btn
+  //    position: absolute
+  //    bottom: 0
+  //    right: 0
+  //    border: none
+  //    width: 100%
+  //    height: 8.5vh
+  //    line-height: 8.5vh
+  //    background: #ff9b51
+  //    color: #fff
+  //    font:
+  //      size: 1em
+  //      weight: 600
+
+.brand__bar
+  box-shadow: 0 5px 5px rgba(0,0,0,0.38)
+
+  .brand__bar__content
+    width: 40%
+    h3
+      padding: 3vh 0 1vh
+    p
+      padding-bottom: 3vh
+  .brand__bar__icon
+    width: 80%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    a
+      padding-left: 3vw
+      line-height: 1em
+      color: #000
+      font:
+        size: 3em
+
+.feature1
+  padding: 14vh 0
+  background: #f5f5f5
+  .feature1__tabs
+    width: 15vh
+    .tab
+      border: none
+      outline: none
+      width: 15vh
+      height: 15vh
+      line-height: 15vh
+      text-align: center
+      color: #fff
+      background: #333333
+      border-radius: 3px
+      margin-bottom: 2px
+      transition: 0.5s
+      font:
+        weight: 700
+        size: 0.94em
+      &.tab__active
+        background: $orange
+  .feature1__content
+    display: none
+    max-width: 40%
+    margin: 0 9%
+    transition: 0.3s
+    h3
+      margin-bottom: 3vh
+    p
+      margin-bottom: 2vh
+    &.active
+      display: block
+  .feature1__image
+    display: none
+    max-width: 40%
+    img
+      width: 100%
+    &.active
+      display: block
+
+.feature
+  padding: 14vh 0
+  .feature__content
+    width: 40%
+    h3
+      margin-bottom: 3vh
+    p
+      margin-bottom: 2vh
+  .feature__img
+    box-shadow: 0 1vh 5vh rgba(0,0,0,0.38)
+    width: 40%
+    img
+      width: 100%
+.feature3
+  background: #f5f5f5
+.process
+  padding: 14vh 0
+  .container
+    display: block
+  h3
+    margin: 4vh 0
+
+//.card
+//  position: relative
+//  width: 100%
+//  height: 29vh
+//  perspective: 1000px
+//  .front, .back
+//    width: 100%
+//    height: 100%
+//    position: absolute
+//    top: 0
+//    left: 0
+//    backface-visibility: hidden
+//    transition: 1s
+//  .back
+//    transform: rotateY(180deg)
+//  .front
+//    background: #333333
+//  &:hover
+//    .front
+//      transform: rotateY(180deg)
+//    .back
+//      transform: rotateY(360deg)
+
+.pricing
+  padding: 14vh 0
+  background: #f5f5f5
+  .item
+    color: #fff
+    width: 30%
+    position: relative
+    .pricing__item__bcg
+      position: relative
+      height: 29vh
+      background: #333333
+    .card__header
+      border-bottom: 1px solid #fff
+      padding: 1vh 0
+    .price
+      //line-height: 15vh
+      font:
+        family: "Raleway", sans-serif
+        size: 5.875em
+        weight: 700
+      span
+        font-size: 0.5em
+    .to__bottom
+      position: absolute
+      bottom: 0
+      width: 100%
+      .sub__text
+        color: #86878b
+        font:
+          size: 0.92em
+        line-height: 2em
+      .popular
+        background: $orange
+        min-height: 1vh
+        font-weight: 700
+        font-size: 0.92em
+        line-height: 2em
+        text-transform: uppercase
+    .pricing__signature
+      text-transform: uppercase
+      padding: 1vh 0
+      background: #fff
+      color: #86878b
+      border-bottom: 1px solid #86878b
+      font-weight: 400
+      &:nth-child(1)
+        border-top: 1px solid #86878b
+
+.testimonials
+  padding: 14vh 0
+  .testimonial
+    text-align: left
+    p
+      padding: 3vh 1.5vh
+      background: #f5f5f5
+      -webkit-border-radius: 5px
+      -moz-border-radius: 5px
+      border-radius: 5px
+    .triangle
+      width: 0
+      height: 0
+      margin-left: 20px
+      border-left: 15px solid transparent
+      border-right: 15px solid transparent
+      border-top: 20px solid #f5f5f5
+  .worker
+    text-align: left
+    position: relative
+    padding: 3% 0
+    display: flex
+    .img
+      margin-right: 2vh
+    .worker__info
+      h3
+        margin: 10px 0 4px
+
+.custom
+  padding: 14vh 0 4vh
+  background: red url("../img/custom__bcg.jpg") no-repeat
+  background-size: cover
+  color: #fff
+  .divider
+    background-color: #fff
+  .custom__btn
+    padding: 1vh 2vh
+.contact
+  padding: 14vh 0
+  .form
+    text-align: center
+    .btn
+      border: none
+  .contact__form
+    .form__area
+      display: flex
+      justify-content: space-between
+      .left__form
+        width: 45%
+      .right__form
+        width: 45%
+        .contact__textarea
+          width: 100%
+          padding: 5vh 0 2vh 3%
+          height: 11vh
+          resize: none
+          //height: 60%
+    .contact__input
+      height: 2vh
+      width: 100%
+
+.footer
+  padding: 3vh 0
+  text-align: center
+  background: #000
+  color: #fff
+
+  .footer__icon
+    letter-spacing: 0.5em
+    font:
+      size: 1.5em
+  .footer__text
+    margin-top: 1vh
+    font:
+      size: 0.75em
+
+@import media.sass
+//16 - 1em
+//20 - 1.25em
+//36 - 2.25em
