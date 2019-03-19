@@ -586,7 +586,8 @@ p {
       .feature1 .container .feature1__content.active {
         display: block; }
     .feature1 .container .feature1__image {
-      max-width: 80%; }
+      max-width: 400px;
+      width: 80%; }
       .feature1 .container .feature1__image.active {
         display: block; }
 
@@ -599,6 +600,7 @@ p {
         margin: 3vh auto; }
     .feature .container .feature__img {
       width: 100%;
+      max-width: 400px;
       margin-top: 5vh; }
 
   .feature2 .container {
