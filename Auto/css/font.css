@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src:    url('../font/Montserrat-Bold.eot');
+    src:    local('Montserrat-Bold'),
+            local('Montserrat Bold'),
+            url('../font/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+            url('../font/Montserrat-Bold.woff') format('woff'),
+            url('../font/Montserrat-Bold.woff2') format('woff2'),
+            url('../font/Montserrat-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Montserrat-ExtraBold';
+    src:    url('../font/Montserrat-ExtraBold.eot');
+    src:    local('Montserrat-ExtraBold'),
+            local('Montserrat ExtraBold'),
+            url('../font/Montserrat-ExtraBold.eot?#iefix') format('embedded-opentype'),
+            url('../font/Montserrat-ExtraBold.woff') format('woff'),
+            url('../font/Montserrat-ExtraBold.woff2') format('woff2'),
+            url('../font/Montserrat-ExtraBold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'Montserrat-Light';
+    src:    url('../font/Montserrat-Light.eot');
+    src:    local('Montserrat-Light'),
+            local('Montserrat Light'),
+            url('../font/Montserrat-Light.eot?#iefix') format('embedded-opentype'),
+            url('../font/Montserrat-Light.woff') format('woff'),
+            url('../font/Montserrat-Light.woff2') format('woff2'),
+            url('../font/Montserrat-Light.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Kely-Rose';
+    src:    url('../font/Kely-Rose.otf');
+    src:    local('Kely-Rose'),
+            local('Kely Rose');
+}
+@font-face {
+    font-family:'Whitney-SSm-Medium';
+    src:    local('Whitney-SSm-Medium'),
+            local('Whitney SSm Medium'),
+            url('../font/Whitney-SSm-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 500;
+}

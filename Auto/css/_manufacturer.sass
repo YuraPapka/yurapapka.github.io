@@ -1,0 +1,70 @@
+.manufacturer
+  background: #fff
+  color: #000
+  width: 100%
+  height: 100vh
+  .manufacturer__full
+    height: 100%
+    margin: 0 5%
+    position: relative
+    display: flex
+    align-items: center
+    .manufacturer__full__content
+      padding-bottom: 20vh
+      width: 50%
+      .manufacturer__full__title
+        margin: 3vh
+        font:
+          size: 5em
+          family: "Montserrat-Bold", sans-serif
+      .manufacturer__full__text
+        font:
+          size: 1em
+          family: "Montserrat-Light", sans-serif
+    .manufacture__full__car
+      position: absolute
+      bottom: 0
+      left: 50%
+      height: 70%
+      .manufacture__full__car__img
+        position: absolute
+        bottom: 0
+        left: 0
+        height: 100%
+        transform: translateX(100%)
+        transition: .5s
+        z-index: 1
+        opacity: 0
+        &.active
+          transform: translateX(0)
+          z-index: 91
+          opacity: 1
+        &.prev__active
+          z-index: 90
+          opacity: 0
+          transform: translateX(-100%)
+  .manufacturer__car
+    z-index: 99
+    position: absolute
+    bottom: 4vh
+    left: 5%
+    right: 5%
+    width: 90%
+    height: 16vh
+    display: flex
+    align-items: center
+    .manufacturer__car__item
+      padding: 0 3%
+      cursor: pointer
+      height: 100%
+      width: calc(100% / 6)
+      border: 2px solid #000
+      display: flex
+      align-items: center
+      img
+        width: 100%
+      &.active, &:hover
+        border: 2px solid #e33d3d
+        background-color: rgba(227, 61, 61, 0.5)
+
+

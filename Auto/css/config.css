@@ -1,0 +1,328 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 2vmin;
+  overflow: hidden; }
+
+.body {
+  width: 100%;
+  height: 100vh;
+  position: relative; }
+
+section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translateY(-100%);
+  transition: 0.5s;
+  z-index: 1; }
+  section.active {
+    transform: translateY(0);
+    z-index: 95; }
+  section.prev__active {
+    transform: translateY(100%); }
+  section .center {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center; }
+    section .center .text {
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      font-size: 5em;
+      font-family: "Montserrat-Bold", sans-serif; }
+
+p, ul, li {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  display: flex;
+  width: 90%;
+  margin: 0 5%;
+  height: 100%; }
+
+.btn {
+  color: #fff;
+  background: none;
+  cursor: pointer;
+  border-color: #fff; }
+  .btn:active, .btn:focus {
+    outline: none; }
+  .btn.btn__red:hover {
+    border-color: #f64041;
+    color: #f64041; }
+
+.header {
+  z-index: 999;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  font-family: "Whitney-SSm-Medium", sans-serif;
+  transition: 0.5s ease;
+  color: #fff; }
+  .header a {
+    text-decoration: none;
+    color: #fff; }
+  .header.black {
+    color: #000; }
+    .header.black a {
+      color: #000; }
+  .header .container {
+    align-items: center;
+    height: 15vh;
+    margin: 0 5%;
+    position: relative; }
+  .header .logo {
+    cursor: none;
+    font-size: 5.2em;
+    font-family: "Kely-Rose", sans-serif; }
+  .header .number {
+    margin-left: 3%; }
+    .header .number a {
+      color: #e33d3d;
+      font-size: 1.55em; }
+    .header .number .number__signature {
+      font-size: 1em; }
+  .header .menu {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0; }
+    .header .menu ul {
+      width: 100%;
+      height: 100%;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      .header .menu ul .menu__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20%;
+        height: 100%;
+        text-align: center;
+        position: relative;
+        cursor: pointer; }
+        .header .menu ul .menu__item a {
+          font-size: 1em;
+          z-index: 99;
+          transition: 0.5s; }
+        .header .menu ul .menu__item:hover a {
+          color: #e33d3d; }
+        .header .menu ul .menu__item::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          transform: scaleY(0);
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: linear-gradient(rgba(227, 70, 70, 0.5), rgba(227, 60, 60, 0));
+          z-index: 98;
+          transition: 0.5s; }
+        .header .menu ul .menu__item:hover:before {
+          transform: scaleY(1); }
+        .header .menu ul .menu__item.active:before {
+          transform: scaleY(1); }
+        .header .menu ul .menu__item.active a {
+          color: #e33d3d; }
+
+.price {
+  position: relative; }
+  .price .price__full {
+    width: 100%;
+    height: 100vh;
+    position: relative; }
+    .price .price__full .price__full__service {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100vh;
+      background: #000;
+      z-index: 95; }
+      .price .price__full .price__full__service.bcg__active__right {
+        transform: translateX(100%);
+        z-index: 96;
+        transition: 0.5s; }
+      .price .price__full .price__full__service.bcg__active__left {
+        transform: translateX(-100%);
+        z-index: 96;
+        transition: 0.5s; }
+      .price .price__full .price__full__service.bcg__active {
+        z-index: 98;
+        transform: translateX(0); }
+      .price .price__full .price__full__service:nth-child(1) {
+        background: url("../img/car__showroom2.jpg") no-repeat;
+        background-size: cover; }
+      .price .price__full .price__full__service:nth-child(2) {
+        background: url("../img/car__wheel.jpg") no-repeat;
+        background-size: cover; }
+      .price .price__full .price__full__service:nth-child(3) {
+        background: url("../img/car__clutch.jpg") no-repeat;
+        background-size: cover; }
+      .price .price__full .price__full__service:nth-child(4) {
+        background: url("../img/car__home.jpg") no-repeat;
+        background-size: cover; }
+  .price .price__services {
+    z-index: 999;
+    margin-bottom: 4vh;
+    color: #fff;
+    width: 100%;
+    height: 16vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+    .price .price__services ul {
+      padding: 0 5%;
+      height: 100%;
+      width: 100%;
+      list-style: none;
+      display: flex;
+      justify-content: left;
+      align-items: center; }
+      .price .price__services ul .price__service {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        width: 22%;
+        height: 80%;
+        border: 2px solid white;
+        font-size: 1.2em;
+        font-family: "Montserrat-ExtraBold", sans-serif; }
+        .price .price__services ul .price__service .icon {
+          margin-left: 5%;
+          display: none;
+          font-size: 3em; }
+        .price .price__services ul .price__service span {
+          margin-left: 10%; }
+        .price .price__services ul .price__service.active {
+          height: 100%; }
+          .price .price__services ul .price__service.active .icon {
+            display: block; }
+    .price .price__services .price__arrows {
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 5%;
+      transform: translateY(-100%); }
+      .price .price__services .price__arrows .price__arrow {
+        cursor: pointer;
+        margin: 1vh;
+        color: #fff;
+        font-size: 2em; }
+
+.action {
+  background: url("../img/car__muscle.jpg");
+  background-size: cover; }
+  .action .container {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: "Montserrat-Bold", sans-serif; }
+    .action .container .action__subheader {
+      position: relative;
+      font-size: 1em;
+      letter-spacing: 0.5em; }
+      .action .container .action__subheader::before, .action .container .action__subheader::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        height: 1px;
+        width: 3vh;
+        background: #ffffff; }
+      .action .container .action__subheader:before {
+        left: -5vh; }
+      .action .container .action__subheader:after {
+        right: -4vh; }
+    .action .container .action__header {
+      margin: 2vh 0;
+      font-size: 5em; }
+    .action .container .action__btn {
+      padding: 1.5vh 3vh;
+      font-size: 1.6em;
+      letter-spacing: 0.3em; }
+
+.manufacturer {
+  background: #fff;
+  color: #000;
+  width: 100%;
+  height: 100vh; }
+  .manufacturer .manufacturer__full {
+    height: 100%;
+    margin: 0 5%;
+    position: relative;
+    display: flex;
+    align-items: center; }
+    .manufacturer .manufacturer__full .manufacturer__full__content {
+      padding-bottom: 20vh;
+      width: 50%; }
+      .manufacturer .manufacturer__full .manufacturer__full__content .manufacturer__full__title {
+        margin: 3vh;
+        font-size: 5em;
+        font-family: "Montserrat-Bold", sans-serif; }
+      .manufacturer .manufacturer__full .manufacturer__full__content .manufacturer__full__text {
+        font-size: 1em;
+        font-family: "Montserrat-Light", sans-serif; }
+    .manufacturer .manufacturer__full .manufacture__full__car {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      height: 70%; }
+      .manufacturer .manufacturer__full .manufacture__full__car .manufacture__full__car__img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        transform: translateX(100%);
+        transition: 0.5s;
+        z-index: 1;
+        opacity: 0; }
+        .manufacturer .manufacturer__full .manufacture__full__car .manufacture__full__car__img.active {
+          transform: translateX(0);
+          z-index: 91;
+          opacity: 1; }
+        .manufacturer .manufacturer__full .manufacture__full__car .manufacture__full__car__img.prev__active {
+          z-index: 90;
+          opacity: 0;
+          transform: translateX(-100%); }
+  .manufacturer .manufacturer__car {
+    z-index: 99;
+    position: absolute;
+    bottom: 4vh;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    height: 16vh;
+    display: flex;
+    align-items: center; }
+    .manufacturer .manufacturer__car .manufacturer__car__item {
+      padding: 0 3%;
+      cursor: pointer;
+      height: 100%;
+      width: calc(100% / 6);
+      border: 2px solid #000;
+      display: flex;
+      align-items: center; }
+      .manufacturer .manufacturer__car .manufacturer__car__item img {
+        width: 100%; }
+      .manufacturer .manufacturer__car .manufacturer__car__item.active, .manufacturer .manufacturer__car .manufacturer__car__item:hover {
+        border: 2px solid #e33d3d;
+        background-color: rgba(227, 61, 61, 0.5); }
+
+.reviews {
+  background: url("../img/car__engine2.jpg");
+  background-size: cover; }
+
+.contact {
+  background: url("../img/car__engine.jpg");
+  background-size: cover; }
+
+/*# sourceMappingURL=config.css.map */
