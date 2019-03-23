@@ -64,8 +64,6 @@ function showService(nextService) {
         nextService = fullServices.length - 1;
     }
 
-    // console.log(prevService + " -> " + nextService);
-
     services[prevService].classList.remove("active");
     services[nextService].classList.add("active");
 
@@ -76,41 +74,23 @@ function showService(nextService) {
 
     for(let i = 0; i < fullServices.length; i++) {
         if(i < prevService) {
-            fullServices[i].classList.add("bcg__active__right");
-            fullServices[i].classList.remove("bcg__active__left");
+            right(i);
         } else {
-            fullServices[i].classList.add("bcg__active__left");
-            fullServices[i].classList.remove("bcg__active__right");
+            left(i);
         }
     }
-    // if(prevService === fullServices.length - 1 && nextService === 0) {
-    //     fullServices[0].classList.add("bcg__active__left");
-    //     fullServices[fullServices.length - 1].classList.add("bcg__active__right");
-    // }
+    if(nextService === 0) {
 
+    }
 
-    // let direction = "bcg__active__left";//,
-    // direction2 = "bcg__active__right";
-    //
-    // if (prevService > nextService) {
-    //     direction = "bcg__active__right";
-    //     direction2 = "bcg__active__left";
-    // }
-    //
-    // fullServices[prevService].classList.remove("bcg__active");
-    // fullServices[prevService].classList.add(direction);
-    // fullServices[nextService].classList.add(direction2);
-    //
-    // setTimeout(function() {
-    //     fullServices[nextService].classList.add("bcg__active");
-    // }, 50);
-    // let prevService2 = prevService;
-    // prevService = nextService;
-    //
-    // setTimeout(function() {
-    //     fullServices[prevService2].classList.remove(direction);
-    //     fullServices[nextService].classList.remove(direction2);
-    // }, 1000);
+    function left(i) {
+        fullServices[i].classList.add("bcg__active__left");
+        fullServices[i].classList.remove("bcg__active__right");
+    }
+    function right(i) {
+        fullServices[i].classList.add("bcg__active__right");
+        fullServices[i].classList.remove("bcg__active__left");
+    }
 }
 // code manufacturer page
 
@@ -118,7 +98,7 @@ let makers = document.getElementsByClassName("manufacturer__car__item");
 // let makers = document.querySelectorAll(".manufacturer__car__item");
 
 for(let j = 0; j < makers.length; j++) {
-    console.log(j);
+    // console.log(j);
     makers[j].addEventListener('click', function() {
         nextManufacturerCar(j);
     })
@@ -129,7 +109,7 @@ let prevCar = 0;
 function nextManufacturerCar(nextCar) {
     if(prevCar === nextCar) return;
 
-    console.log(prevCar + " -> " + nextCar);
+    // console.log(prevCar + " -> " + nextCar);
 
     //add active style menu bottom menu
     makers[prevCar].classList.remove("active");
@@ -138,7 +118,6 @@ function nextManufacturerCar(nextCar) {
     let cars = document.getElementsByClassName("manufacture__full__car__img");
 
     cars[prevCar].classList.add("prev__active");
-
     cars[prevCar].classList.remove("active");
     cars[nextCar].classList.add("active");
 

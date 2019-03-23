@@ -49,7 +49,8 @@ p, ul, li {
   color: #fff;
   background: none;
   cursor: pointer;
-  border-color: #fff; }
+  border-color: #fff;
+  transition: 0.5s; }
   .btn:active, .btn:focus {
     outline: none; }
   .btn.btn__red:hover {
@@ -77,7 +78,6 @@ p, ul, li {
     margin: 0 5%;
     position: relative; }
   .header .logo {
-    cursor: none;
     font-size: 5.2em;
     font-family: "Kely-Rose", sans-serif; }
   .header .number {
@@ -112,8 +112,6 @@ p, ul, li {
           font-size: 1em;
           z-index: 99;
           transition: 0.5s; }
-        .header .menu ul .menu__item:hover a {
-          color: #e33d3d; }
         .header .menu ul .menu__item::before {
           content: "";
           width: 100%;
@@ -123,14 +121,13 @@ p, ul, li {
           top: 0;
           left: 0;
           background: linear-gradient(rgba(227, 70, 70, 0.5), rgba(227, 60, 60, 0));
+          border-bottom: 2px solid #e33d3d;
           z-index: 98;
           transition: 0.5s; }
         .header .menu ul .menu__item:hover:before {
           transform: scaleY(1); }
         .header .menu ul .menu__item.active:before {
           transform: scaleY(1); }
-        .header .menu ul .menu__item.active a {
-          color: #e33d3d; }
 
 .price {
   position: relative; }
@@ -190,21 +187,36 @@ p, ul, li {
         cursor: pointer;
         display: flex;
         align-items: center;
+        transition: 0.5s;
         width: 22%;
         height: 80%;
         border: 2px solid white;
+        overflow: hidden;
         font-size: 1.2em;
         font-family: "Montserrat-ExtraBold", sans-serif; }
-        .price .price__services ul .price__service .icon {
-          margin-left: 5%;
-          display: none;
-          font-size: 3em; }
-        .price .price__services ul .price__service span {
-          margin-left: 10%; }
-        .price .price__services ul .price__service.active {
-          height: 100%; }
-          .price .price__services ul .price__service.active .icon {
-            display: block; }
+        .price .price__services ul .price__service .price__service__content {
+          transition: 0.5s;
+          transform: translateX(-40%);
+          display: flex;
+          align-items: center;
+          justify-content: left; }
+          .price .price__services ul .price__service .price__service__content .icon {
+            margin-left: 5%;
+            font-size: 3em; }
+          .price .price__services ul .price__service .price__service__content span {
+            transform: translateX(20%);
+            transition: 0.5s;
+            display: block;
+            margin-left: 10%; }
+        .price .price__services ul .price__service.active, .price .price__services ul .price__service:hover {
+          height: 100%;
+          border-color: #e33d3d; }
+          .price .price__services ul .price__service.active .price__service__content, .price .price__services ul .price__service:hover .price__service__content {
+            transform: translateX(0%);
+            color: #e33d3d; }
+            .price .price__services ul .price__service.active .price__service__content span, .price .price__services ul .price__service:hover .price__service__content span {
+              transform: translateX(0%);
+              color: #e33d3d; }
     .price .price__services .price__arrows {
       display: flex;
       position: absolute;
@@ -215,7 +227,10 @@ p, ul, li {
         cursor: pointer;
         margin: 1vh;
         color: #fff;
-        font-size: 2em; }
+        font-size: 2em;
+        transition: 0.5s; }
+        .price .price__services .price__arrows .price__arrow:hover {
+          color: #e33d3d; }
 
 .action {
   background: url("../img/car__muscle.jpg");
@@ -243,7 +258,7 @@ p, ul, li {
       .action .container .action__subheader:after {
         right: -4vh; }
     .action .container .action__header {
-      margin: 2vh 0;
+      margin: 5vh 0;
       font-size: 5em; }
     .action .container .action__btn {
       padding: 1.5vh 3vh;
@@ -310,12 +325,12 @@ p, ul, li {
       width: calc(100% / 6);
       border: 2px solid #000;
       display: flex;
-      align-items: center; }
+      align-items: center;
+      transition: 0.5s; }
       .manufacturer .manufacturer__car .manufacturer__car__item img {
         width: 100%; }
       .manufacturer .manufacturer__car .manufacturer__car__item.active, .manufacturer .manufacturer__car .manufacturer__car__item:hover {
-        border: 2px solid #e33d3d;
-        background-color: rgba(227, 61, 61, 0.5); }
+        border: 2px solid #e33d3d; }
 
 .reviews {
   background: url("../img/car__engine2.jpg");
