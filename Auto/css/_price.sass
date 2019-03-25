@@ -1,3 +1,5 @@
+$time: .5s
+
 .price
   position: relative
   .price__full
@@ -55,7 +57,6 @@
       justify-content: left
       align-items: center
       .price__service
-        $time: .5s
         cursor: pointer
         display: flex
         align-items: center
@@ -68,35 +69,14 @@
           size: 1em
           family: "Montserrat-ExtraBold", sans-serif
         .price__service__content
-          transition: $time
-          transform: translateX(-40%)
           display: flex
           align-items: center
           justify-content: left
-          .icon
-            margin-left: 5%
-            font:
-              size: 3em
-          span
-            transform: translateX(20%)
-            transition: $time
-            display: block
-            margin-left: 10%
-        &.active, &:hover
-          height: 100%
-          border-color: $pink
-          .price__service__content
-            transform: translateX(0%)
-            color: $pink
-            span
-              transform: translateX(0%)
-              color: $pink
     .price__arrows
       display: flex
       position: absolute
-      top: 0
+      top: -35%
       left: 5%
-      transform: translateY(-100%)
       .price__arrow
         cursor: pointer
         margin: 1vh
@@ -106,23 +86,52 @@
         //transition: top 0.5s ease-out
         &:hover
           color: $pink
-@media screen and (max-width: 760px)
+@media screen and (min-width: 761px)
   .price
-    .price__full
-      .price__services
-        .price__service__content
-          transform: translate(0%,0%)
-          .icon
-            margin-left: 5%
-            font:
-              size: 3em
-          span
-            transform: translate(0%,0%)
-            margin-left: 10%
+    .price__services
+      ul
+        .price__service
+          .price__service__content
+            transition: $time
+            transform: translateX(-40%)
+            .icon
+              margin-left: 5%
+              font:
+                size: 3em
+            span
+              transform: translateX(20%)
+              transition: $time
+              display: block
+              margin-left: 10%
           &.active, &:hover
             height: 100%
             border-color: $pink
             .price__service__content
-              transform: translate(0%,0%)
+              transform: translateX(0%)
+              color: $pink
               span
-                transform: translate(0%,0%)
+                transform: translateX(0%)
+                color: $pink
+@media screen and (max-width: 760px)
+  .price
+    .price__services
+      ul
+        .price__service
+          height: 100%
+          .price__service__content
+            flex-direction: column
+            .icon
+              font-size: 3em
+              margin-bottom: 2vh
+            span
+              font-size: 1.25em
+              text-align: center
+          &.active, &:hover
+            border-color: $pink
+            .price__service__content
+              color: $pink
+              span
+                color: $pink
+    .price__arrows
+      width: 90%
+      justify-content: space-between

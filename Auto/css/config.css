@@ -73,7 +73,7 @@ p, ul, li {
     .header.black a {
       color: #000; }
     .header.black .menu .mobile__menu {
-      background: rgba(33, 33, 33, 0.2); }
+      box-shadow: 0 0 2px rgba(33, 33, 33, 0.2); }
   .header .container {
     align-items: center;
     height: 15vh;
@@ -191,18 +191,18 @@ p, ul, li {
     .header .menu .menu__items .menu__item a .menu__icon {
       transition: 0.5s;
       z-index: 5;
-      font-size: 1.75em; }
+      font-size: 3em; }
   .header .menu .menu__items.menu__active .menu__item:nth-child(1) {
-    transform: translate(-6vh, -3vh);
+    transform: translate(-5vh, -4vh);
     transition-delay: 0.2s; }
   .header .menu .menu__items.menu__active .menu__item:nth-child(2) {
-    transform: translate(-10vh, 2vh);
+    transform: translate(-9vh, 1vh);
     transition-delay: 0.4s; }
   .header .menu .menu__items.menu__active .menu__item:nth-child(3) {
     transform: translate(-7vh, 7vh);
     transition-delay: 0.5s; }
   .header .menu .menu__items.menu__active .menu__item:nth-child(4) {
-    transform: translate(-1vh, 10vh);
+    transform: translate(-1vh, 9vh);
     transition-delay: 0.3s; }
   .header .menu .menu__items.menu__active .menu__item:nth-child(5) {
     transform: translate(5vh, 6vh);
@@ -273,34 +273,14 @@ p, ul, li {
         font-size: 1em;
         font-family: "Montserrat-ExtraBold", sans-serif; }
         .price .price__services ul .price__service .price__service__content {
-          transition: 0.5s;
-          transform: translateX(-40%);
           display: flex;
           align-items: center;
           justify-content: left; }
-          .price .price__services ul .price__service .price__service__content .icon {
-            margin-left: 5%;
-            font-size: 3em; }
-          .price .price__services ul .price__service .price__service__content span {
-            transform: translateX(20%);
-            transition: 0.5s;
-            display: block;
-            margin-left: 10%; }
-        .price .price__services ul .price__service.active, .price .price__services ul .price__service:hover {
-          height: 100%;
-          border-color: #e33d3d; }
-          .price .price__services ul .price__service.active .price__service__content, .price .price__services ul .price__service:hover .price__service__content {
-            transform: translateX(0%);
-            color: #e33d3d; }
-            .price .price__services ul .price__service.active .price__service__content span, .price .price__services ul .price__service:hover .price__service__content span {
-              transform: translateX(0%);
-              color: #e33d3d; }
     .price .price__services .price__arrows {
       display: flex;
       position: absolute;
-      top: 0;
-      left: 5%;
-      transform: translateY(-100%); }
+      top: -35%;
+      left: 5%; }
       .price .price__services .price__arrows .price__arrow {
         cursor: pointer;
         margin: 1vh;
@@ -310,22 +290,47 @@ p, ul, li {
         .price .price__services .price__arrows .price__arrow:hover {
           color: #e33d3d; }
 
-@media screen and (max-width: 760px) {
-  .price .price__full .price__services .price__service__content {
-    transform: translate(0%, 0%); }
-    .price .price__full .price__services .price__service__content .icon {
+@media screen and (min-width: 761px) {
+  .price .price__services ul .price__service .price__service__content {
+    transition: 0.5s;
+    transform: translateX(-40%); }
+    .price .price__services ul .price__service .price__service__content .icon {
       margin-left: 5%;
       font-size: 3em; }
-    .price .price__full .price__services .price__service__content span {
-      transform: translate(0%, 0%);
+    .price .price__services ul .price__service .price__service__content span {
+      transform: translateX(20%);
+      transition: 0.5s;
+      display: block;
       margin-left: 10%; }
-    .price .price__full .price__services .price__service__content.active, .price .price__full .price__services .price__service__content:hover {
-      height: 100%;
+  .price .price__services ul .price__service.active, .price .price__services ul .price__service:hover {
+    height: 100%;
+    border-color: #e33d3d; }
+    .price .price__services ul .price__service.active .price__service__content, .price .price__services ul .price__service:hover .price__service__content {
+      transform: translateX(0%);
+      color: #e33d3d; }
+      .price .price__services ul .price__service.active .price__service__content span, .price .price__services ul .price__service:hover .price__service__content span {
+        transform: translateX(0%);
+        color: #e33d3d; } }
+@media screen and (max-width: 760px) {
+  .price .price__services ul .price__service {
+    height: 100%; }
+    .price .price__services ul .price__service .price__service__content {
+      flex-direction: column; }
+      .price .price__services ul .price__service .price__service__content .icon {
+        font-size: 3em;
+        margin-bottom: 2vh; }
+      .price .price__services ul .price__service .price__service__content span {
+        font-size: 1.25em;
+        text-align: center; }
+    .price .price__services ul .price__service.active, .price .price__services ul .price__service:hover {
       border-color: #e33d3d; }
-      .price .price__full .price__services .price__service__content.active .price__service__content, .price .price__full .price__services .price__service__content:hover .price__service__content {
-        transform: translate(0%, 0%); }
-        .price .price__full .price__services .price__service__content.active .price__service__content span, .price .price__full .price__services .price__service__content:hover .price__service__content span {
-          transform: translate(0%, 0%); } }
+      .price .price__services ul .price__service.active .price__service__content, .price .price__services ul .price__service:hover .price__service__content {
+        color: #e33d3d; }
+        .price .price__services ul .price__service.active .price__service__content span, .price .price__services ul .price__service:hover .price__service__content span {
+          color: #e33d3d; }
+  .price .price__arrows {
+    width: 90%;
+    justify-content: space-between; } }
 .action {
   background: url("../img/car__muscle.jpg");
   background-size: cover; }
@@ -382,12 +387,12 @@ p, ul, li {
         font-size: 1em;
         font-family: "Montserrat-Light", sans-serif; }
     .manufacturer .manufacturer__full .manufacture__full__car__wrap {
-      position: absolute;
-      bottom: 0;
       width: 100%;
       height: 100%; }
       .manufacturer .manufacturer__full .manufacture__full__car__wrap .manufacture__full__car {
-        margin-left: 50%;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
         height: 70%; }
         .manufacturer .manufacturer__full .manufacture__full__car__wrap .manufacture__full__car .manufacture__full__car__img {
           position: absolute;
