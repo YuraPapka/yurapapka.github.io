@@ -13,6 +13,9 @@
     color: #000
     a
       color: #000
+    .menu
+      .mobile__menu
+        background: rgba(33,33,33,.2)
       //.menu__icon
         color: #000
   .container
@@ -150,19 +153,19 @@
               font-size: 1.75em
         &.menu__active
           .menu__item
-            $time: 0.25s
+            $time: 0.5s
             &:nth-child(1)
-              transform: translate(-7vh, -5vh)
-              transition-delay: $time/5
-            &:nth-child(2)
-              transform: translate(-10vh, 1vh)
+              transform: translate(-6vh, -3vh)
               transition-delay: $time/5*2
-            &:nth-child(3)
-              transform: translate(-6vh, 7vh)
-              transition-delay: $time/5*3
-            &:nth-child(4)
-              transform: translate(0vh , 10vh)
+            &:nth-child(2)
+              transform: translate(-10vh, 2vh)
               transition-delay: $time/5*4
-            &:nth-child(5)
-              transform: translate(6vh, 6vh)
+            &:nth-child(3)
+              transform: translate(-7vh, 7vh)
               transition-delay: $time
+            &:nth-child(4)
+              transform: translate(-1vh , 10vh)
+              transition-delay: $time/5*3
+            &:nth-child(5)
+              transform: translate(5vh, 6vh)
+              transition-delay: $time/5

@@ -72,6 +72,8 @@ p, ul, li {
     color: #000; }
     .header.black a {
       color: #000; }
+    .header.black .menu .mobile__menu {
+      background: rgba(33, 33, 33, 0.2); }
   .header .container {
     align-items: center;
     height: 15vh;
@@ -191,20 +193,20 @@ p, ul, li {
       z-index: 5;
       font-size: 1.75em; }
   .header .menu .menu__items.menu__active .menu__item:nth-child(1) {
-    transform: translate(-7vh, -5vh);
-    transition-delay: 0.05s; }
-  .header .menu .menu__items.menu__active .menu__item:nth-child(2) {
-    transform: translate(-10vh, 1vh);
-    transition-delay: 0.1s; }
-  .header .menu .menu__items.menu__active .menu__item:nth-child(3) {
-    transform: translate(-6vh, 7vh);
-    transition-delay: 0.15s; }
-  .header .menu .menu__items.menu__active .menu__item:nth-child(4) {
-    transform: translate(0vh, 10vh);
+    transform: translate(-6vh, -3vh);
     transition-delay: 0.2s; }
+  .header .menu .menu__items.menu__active .menu__item:nth-child(2) {
+    transform: translate(-10vh, 2vh);
+    transition-delay: 0.4s; }
+  .header .menu .menu__items.menu__active .menu__item:nth-child(3) {
+    transform: translate(-7vh, 7vh);
+    transition-delay: 0.5s; }
+  .header .menu .menu__items.menu__active .menu__item:nth-child(4) {
+    transform: translate(-1vh, 10vh);
+    transition-delay: 0.3s; }
   .header .menu .menu__items.menu__active .menu__item:nth-child(5) {
-    transform: translate(6vh, 6vh);
-    transition-delay: 0.25s; } }
+    transform: translate(5vh, 6vh);
+    transition-delay: 0.1s; } }
 .price {
   position: relative; }
   .price .price__full {
@@ -379,28 +381,31 @@ p, ul, li {
       .manufacturer .manufacturer__full .manufacturer__full__content .manufacturer__full__text {
         font-size: 1em;
         font-family: "Montserrat-Light", sans-serif; }
-    .manufacturer .manufacturer__full .manufacture__full__car {
+    .manufacturer .manufacturer__full .manufacture__full__car__wrap {
       position: absolute;
       bottom: 0;
-      left: 50%;
-      height: 70%; }
-      .manufacturer .manufacturer__full .manufacture__full__car .manufacture__full__car__img {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 100%;
-        transform: translateX(100%);
-        transition: 0.5s;
-        z-index: 1;
-        opacity: 0; }
-        .manufacturer .manufacturer__full .manufacture__full__car .manufacture__full__car__img.active {
-          transform: translateX(0);
-          z-index: 91;
-          opacity: 1; }
-        .manufacturer .manufacturer__full .manufacture__full__car .manufacture__full__car__img.prev__active {
-          z-index: 90;
-          opacity: 0;
-          transform: translateX(-100%); }
+      width: 100%;
+      height: 100%; }
+      .manufacturer .manufacturer__full .manufacture__full__car__wrap .manufacture__full__car {
+        margin-left: 50%;
+        height: 70%; }
+        .manufacturer .manufacturer__full .manufacture__full__car__wrap .manufacture__full__car .manufacture__full__car__img {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 100%;
+          transform: translateX(100%);
+          transition: 0.5s;
+          z-index: 1;
+          opacity: 0; }
+          .manufacturer .manufacturer__full .manufacture__full__car__wrap .manufacture__full__car .manufacture__full__car__img.active {
+            transform: translateX(0);
+            z-index: 91;
+            opacity: 1; }
+          .manufacturer .manufacturer__full .manufacture__full__car__wrap .manufacture__full__car .manufacture__full__car__img.prev__active {
+            z-index: 90;
+            opacity: 0;
+            transform: translateX(-100%); }
   .manufacturer .manufacturer__car {
     z-index: 99;
     position: absolute;

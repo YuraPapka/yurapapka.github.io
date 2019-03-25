@@ -65,7 +65,7 @@
         border: 2px solid white
         overflow: hidden
         font:
-          size: 1.2em
+          size: 1em
           family: "Montserrat-ExtraBold", sans-serif
         .price__service__content
           transition: $time
@@ -106,3 +106,23 @@
         //transition: top 0.5s ease-out
         &:hover
           color: $pink
+@media screen and (max-width: 760px)
+  .price
+    .price__full
+      .price__services
+        .price__service__content
+          transform: translate(0%,0%)
+          .icon
+            margin-left: 5%
+            font:
+              size: 3em
+          span
+            transform: translate(0%,0%)
+            margin-left: 10%
+          &.active, &:hover
+            height: 100%
+            border-color: $pink
+            .price__service__content
+              transform: translate(0%,0%)
+              span
+                transform: translate(0%,0%)

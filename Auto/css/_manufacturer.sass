@@ -9,6 +9,7 @@
     position: relative
     display: flex
     align-items: center
+    overflow: hidden
     .manufacturer__full__content
       padding-bottom: 20vh
       width: 50%
@@ -21,28 +22,31 @@
         font:
           size: 1em
           family: "Montserrat-Light", sans-serif
-    .manufacture__full__car
+    .manufacture__full__car__wrap
       position: absolute
       bottom: 0
-      left: 50%
-      height: 70%
-      .manufacture__full__car__img
-        position: absolute
-        bottom: 0
-        left: 0
-        height: 100%
-        transform: translateX(100%)
-        transition: .5s
-        z-index: 1
-        opacity: 0
-        &.active
-          transform: translateX(0)
-          z-index: 91
-          opacity: 1
-        &.prev__active
-          z-index: 90
+      width: 100%
+      height: 100%
+      .manufacture__full__car
+        margin-left: 50%
+        height: 70%
+        .manufacture__full__car__img
+          position: absolute
+          bottom: 0
+          left: 0
+          height: 100%
+          transform: translateX(100%)
+          transition: .5s
+          z-index: 1
           opacity: 0
-          transform: translateX(-100%)
+          &.active
+            transform: translateX(0)
+            z-index: 91
+            opacity: 1
+          &.prev__active
+            z-index: 90
+            opacity: 0
+            transform: translateX(-100%)
   .manufacturer__car
     z-index: 99
     position: absolute
@@ -66,4 +70,11 @@
         width: 100%
       &.active, &:hover
         border: 2px solid #e33d3d
+        background-color: rgba(255, 255, 255, 0.1)
         //background-color: rgba(227, 61, 61, 0.5)
+
+@media screen and (max-width: 760px)
+  .manufacturer
+    .manufacturer__car
+      .manufacturer__car__item
+        height: auto
