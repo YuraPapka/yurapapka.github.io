@@ -63,7 +63,7 @@ p, ul, li {
   position: fixed;
   top: 0;
   font-family: "Whitney-SSm-Medium", sans-serif;
-  transition: 0.5s ease;
+  transition: 0.5s ease all;
   color: #fff; }
   .header a {
     text-decoration: none;
@@ -92,43 +92,119 @@ p, ul, li {
     height: 100%;
     position: absolute;
     right: 0; }
-    .header .menu ul {
+    .header .menu .mobile__menu {
+      display: none; }
+    .header .menu .menu__items {
       width: 100%;
       height: 100%;
       list-style: none;
       display: flex;
       justify-content: space-between;
       align-items: center; }
-      .header .menu ul .menu__item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 20%;
-        height: 100%;
-        text-align: center;
-        position: relative;
+      .header .menu .menu__items .menu__item {
         cursor: pointer; }
-        .header .menu ul .menu__item a {
-          font-size: 1em;
-          z-index: 99;
-          transition: 0.5s; }
-        .header .menu ul .menu__item::before {
-          content: "";
-          width: 100%;
-          height: 100%;
-          transform: scaleY(0);
-          position: absolute;
-          top: 0;
-          left: 0;
-          background: linear-gradient(rgba(227, 70, 70, 0.5), rgba(227, 60, 60, 0));
-          border-bottom: 2px solid #e33d3d;
-          z-index: 98;
-          transition: 0.5s; }
-        .header .menu ul .menu__item:hover:before {
-          transform: scaleY(1); }
-        .header .menu ul .menu__item.active:before {
-          transform: scaleY(1); }
 
+@media screen and (min-width: 761px) {
+  .header .menu .menu__items .menu__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    position: relative; }
+    .header .menu .menu__items .menu__item a {
+      font-size: 1em;
+      z-index: 99;
+      transition: 0.5s; }
+      .header .menu .menu__items .menu__item a .menu__icon {
+        display: none; }
+    .header .menu .menu__items .menu__item::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      transform: scaleY(0);
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(rgba(227, 70, 70, 0.5), rgba(227, 60, 60, 0));
+      border-bottom: 2px solid #e33d3d;
+      z-index: 98;
+      transition: 0.5s; }
+    .header .menu .menu__items .menu__item:hover:before {
+      transform: scaleY(1); }
+    .header .menu .menu__items .menu__item.active:before {
+      transform: scaleY(1); } }
+@media screen and (max-width: 760px), screen and (orientation: portrait) {
+  .header .menu .mobile__menu {
+    position: absolute;
+    right: 4vh;
+    top: 5vh;
+    display: block;
+    width: 6vh;
+    height: 6vh;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 6;
+    overflow: hidden; }
+    .header .menu .mobile__menu .menu__button {
+      display: block;
+      z-index: 7;
+      height: 100%;
+      width: 100%; }
+      .header .menu .mobile__menu .menu__button span, .header .menu .mobile__menu .menu__button span:before, .header .menu .mobile__menu .menu__button span:after {
+        position: absolute;
+        top: 50%;
+        margin-top: -1px;
+        left: 50%;
+        margin-left: -1.5vh;
+        height: 2px;
+        width: 3vh;
+        background: #000;
+        transition: 1s; }
+      .header .menu .mobile__menu .menu__button span:before, .header .menu .mobile__menu .menu__button span:after {
+        content: "";
+        display: block; }
+      .header .menu .mobile__menu .menu__button span:before {
+        transform: translateY(-1.2vh); }
+      .header .menu .mobile__menu .menu__button span:after {
+        transform: translateY(1.2vh); }
+      .header .menu .mobile__menu .menu__button__active span {
+        height: 0; }
+        .header .menu .mobile__menu .menu__button__active span:before {
+          transform: rotate(-45deg);
+          transform-origin: center; }
+        .header .menu .mobile__menu .menu__button__active span:after {
+          transform: rotate(45deg);
+          transform-origin: center; }
+  .header .menu .menu__items .menu__item {
+    transition: 0.5s;
+    position: absolute;
+    right: 5vh;
+    top: 6vh; }
+    .header .menu .menu__items .menu__item:hover a .menu__icon, .header .menu .menu__items .menu__item.active a .menu__icon {
+      color: red; }
+    .header .menu .menu__items .menu__item a span {
+      display: none; }
+    .header .menu .menu__items .menu__item a .menu__icon {
+      transition: 0.5s;
+      z-index: 5;
+      font-size: 1.75em; }
+  .header .menu .menu__items.menu__active .menu__item:nth-child(1) {
+    transform: translate(-7vh, -5vh);
+    transition-delay: 0.05s; }
+  .header .menu .menu__items.menu__active .menu__item:nth-child(2) {
+    transform: translate(-10vh, 1vh);
+    transition-delay: 0.1s; }
+  .header .menu .menu__items.menu__active .menu__item:nth-child(3) {
+    transform: translate(-6vh, 7vh);
+    transition-delay: 0.15s; }
+  .header .menu .menu__items.menu__active .menu__item:nth-child(4) {
+    transform: translate(0vh, 10vh);
+    transition-delay: 0.2s; }
+  .header .menu .menu__items.menu__active .menu__item:nth-child(5) {
+    transform: translate(6vh, 6vh);
+    transition-delay: 0.25s; } }
 .price {
   position: relative; }
   .price .price__full {
@@ -192,7 +268,7 @@ p, ul, li {
         height: 80%;
         border: 2px solid white;
         overflow: hidden;
-        font-size: 1.2em;
+        font-size: 1em;
         font-family: "Montserrat-ExtraBold", sans-serif; }
         .price .price__services ul .price__service .price__service__content {
           transition: 0.5s;
@@ -232,6 +308,22 @@ p, ul, li {
         .price .price__services .price__arrows .price__arrow:hover {
           color: #e33d3d; }
 
+@media screen and (max-width: 760px) {
+  .price .price__full .price__services .price__service__content {
+    transform: translate(0%, 0%); }
+    .price .price__full .price__services .price__service__content .icon {
+      margin-left: 5%;
+      font-size: 3em; }
+    .price .price__full .price__services .price__service__content span {
+      transform: translate(0%, 0%);
+      margin-left: 10%; }
+    .price .price__full .price__services .price__service__content.active, .price .price__full .price__services .price__service__content:hover {
+      height: 100%;
+      border-color: #e33d3d; }
+      .price .price__full .price__services .price__service__content.active .price__service__content, .price .price__full .price__services .price__service__content:hover .price__service__content {
+        transform: translate(0%, 0%); }
+        .price .price__full .price__services .price__service__content.active .price__service__content span, .price .price__full .price__services .price__service__content:hover .price__service__content span {
+          transform: translate(0%, 0%); } }
 .action {
   background: url("../img/car__muscle.jpg");
   background-size: cover; }
@@ -275,7 +367,8 @@ p, ul, li {
     margin: 0 5%;
     position: relative;
     display: flex;
-    align-items: center; }
+    align-items: center;
+    overflow: hidden; }
     .manufacturer .manufacturer__full .manufacturer__full__content {
       padding-bottom: 20vh;
       width: 50%; }
@@ -330,8 +423,12 @@ p, ul, li {
       .manufacturer .manufacturer__car .manufacturer__car__item img {
         width: 100%; }
       .manufacturer .manufacturer__car .manufacturer__car__item.active, .manufacturer .manufacturer__car .manufacturer__car__item:hover {
-        border: 2px solid #e33d3d; }
+        border: 2px solid #e33d3d;
+        background-color: rgba(255, 255, 255, 0.1); }
 
+@media screen and (max-width: 760px) {
+  .manufacturer .manufacturer__car .manufacturer__car__item {
+    height: auto; } }
 .reviews {
   background: url("../img/car__engine2.jpg");
   background-size: cover; }

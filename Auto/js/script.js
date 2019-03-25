@@ -82,7 +82,6 @@ function showService(nextService) {
     if(nextService === 0) {
 
     }
-
     function left(i) {
         fullServices[i].classList.add("bcg__active__left");
         fullServices[i].classList.remove("bcg__active__right");
@@ -93,9 +92,7 @@ function showService(nextService) {
     }
 }
 // code manufacturer page
-
 let makers = document.getElementsByClassName("manufacturer__car__item");
-// let makers = document.querySelectorAll(".manufacturer__car__item");
 
 for(let j = 0; j < makers.length; j++) {
     // console.log(j);
@@ -108,8 +105,6 @@ let prevCar = 0;
 
 function nextManufacturerCar(nextCar) {
     if(prevCar === nextCar) return;
-
-    // console.log(prevCar + " -> " + nextCar);
 
     //add active style menu bottom menu
     makers[prevCar].classList.remove("active");
@@ -126,16 +121,13 @@ function nextManufacturerCar(nextCar) {
 
     setTimeout(function() {
         cars[prevCar2].classList.remove("prev__active");
-
-}, 500);
-
-    // pages[prevPage].classList.add("prev__active");
-    // pages[prevPage].classList.remove("active");
-    // pages[nextPage].classList.add("active");
-    // let prevPage2 = prevPage;
-    // setTimeout(function() {
-    //     pages[prevPage2].classList.remove("prev__active");
-    //
-    // }, 500);
-    // prevPage = nextPage;
+    }, 500);
 }
+// script to work menu button
+document.getElementById("menu__button").addEventListener('click', function(e) {
+    e.preventDefault();
+    console.log("click to menu");
+    this.classList.toggle('menu__button__active');
+    // document.querySelector("menu__items").classList.toggle("menu__active");
+    document.getElementsByClassName("menu__items")[0].classList.toggle("menu__active");
+});
