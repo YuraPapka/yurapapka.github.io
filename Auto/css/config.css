@@ -15,18 +15,26 @@ section {
   left: 0;
   width: 100%;
   height: 100vh;
+  -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
+  -webkit-transition: .5s;
   transition: .5s;
   z-index: 1; }
   section.active {
+    -webkit-transform: translateY(0);
     transform: translateY(0);
     z-index: 95; }
   section.prev__active {
+    -webkit-transform: translateY(100%);
     transform: translateY(100%); }
   section .center {
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center; }
     section .center .text {
       width: 100%;
@@ -40,6 +48,8 @@ p, ul, li {
   padding: 0; }
 
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 90%;
   margin: 0 5%;
@@ -50,6 +60,7 @@ p, ul, li {
   background: none;
   cursor: pointer;
   border-color: #fff;
+  -webkit-transition: .5s;
   transition: .5s; }
   .btn:active, .btn:focus {
     outline: none; }
@@ -63,6 +74,7 @@ p, ul, li {
   position: fixed;
   top: 0;
   font-family: "Whitney-SSm-Medium", sans-serif;
+  -webkit-transition: 0.5s ease all;
   transition: 0.5s ease all;
   color: #fff; }
   .header a {
@@ -73,8 +85,11 @@ p, ul, li {
     .header.black a {
       color: #000; }
     .header.black .menu .mobile__menu {
+      -webkit-box-shadow: 0 0 2px rgba(33, 33, 33, 0.2);
       box-shadow: 0 0 2px rgba(33, 33, 33, 0.2); }
   .header .container {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     height: 15vh;
     margin: 0 5%;
@@ -100,16 +115,28 @@ p, ul, li {
       width: 100%;
       height: 100%;
       list-style: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center; }
       .header .menu .menu__items .menu__item {
         cursor: pointer; }
 
 @media screen and (min-width: 761px) {
   .header .menu .menu__items .menu__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     width: 20%;
     height: 100%;
@@ -118,6 +145,7 @@ p, ul, li {
     .header .menu .menu__items .menu__item a {
       font-size: 1em;
       z-index: 99;
+      -webkit-transition: 0.5s;
       transition: 0.5s; }
       .header .menu .menu__items .menu__item a .menu__icon {
         display: none; }
@@ -125,17 +153,22 @@ p, ul, li {
       content: "";
       width: 100%;
       height: 100%;
+      -webkit-transform: scaleY(0);
       transform: scaleY(0);
       position: absolute;
       top: 0;
       left: 0;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(227, 70, 70, 0.5)), to(rgba(227, 60, 60, 0)));
       background: linear-gradient(rgba(227, 70, 70, 0.5), rgba(227, 60, 60, 0));
       border-bottom: 2px solid #e33d3d;
       z-index: 98;
+      -webkit-transition: 0.5s;
       transition: 0.5s; }
     .header .menu .menu__items .menu__item:hover:before {
+      -webkit-transform: scaleY(1);
       transform: scaleY(1); }
     .header .menu .menu__items .menu__item.active:before {
+      -webkit-transform: scaleY(1);
       transform: scaleY(1); } }
 
 @media screen and (max-width: 760px), screen and (orientation: portrait) {
@@ -166,23 +199,31 @@ p, ul, li {
           height: 2px;
           width: 3vh;
           background: #000;
+          -webkit-transition: 1s;
           transition: 1s; }
         .header .menu .mobile__menu .menu__button span:before, .header .menu .mobile__menu .menu__button span:after {
           content: "";
           display: block; }
         .header .menu .mobile__menu .menu__button span:before {
+          -webkit-transform: translateY(-1.2vh);
           transform: translateY(-1.2vh); }
         .header .menu .mobile__menu .menu__button span:after {
+          -webkit-transform: translateY(1.2vh);
           transform: translateY(1.2vh); }
         .header .menu .mobile__menu .menu__button__active span {
           height: 0; }
           .header .menu .mobile__menu .menu__button__active span:before {
+            -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
+            -webkit-transform-origin: center;
             transform-origin: center; }
           .header .menu .mobile__menu .menu__button__active span:after {
+            -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
+            -webkit-transform-origin: center;
             transform-origin: center; }
     .header .menu .menu__items .menu__item {
+      -webkit-transition: 0.5s;
       transition: 0.5s;
       position: absolute;
       right: 5vh;
@@ -192,23 +233,34 @@ p, ul, li {
       .header .menu .menu__items .menu__item a span {
         display: none; }
       .header .menu .menu__items .menu__item a .menu__icon {
+        -webkit-transition: 0.5s;
         transition: 0.5s;
         z-index: 5;
         font-size: 3em; }
     .header .menu .menu__items.menu__active .menu__item:nth-child(1) {
+      -webkit-transform: translate(-5vh, -4vh);
       transform: translate(-5vh, -4vh);
+      -webkit-transition-delay: 0.2s;
       transition-delay: 0.2s; }
     .header .menu .menu__items.menu__active .menu__item:nth-child(2) {
+      -webkit-transform: translate(-9vh, 1vh);
       transform: translate(-9vh, 1vh);
+      -webkit-transition-delay: 0.4s;
       transition-delay: 0.4s; }
     .header .menu .menu__items.menu__active .menu__item:nth-child(3) {
+      -webkit-transform: translate(-7vh, 7vh);
       transform: translate(-7vh, 7vh);
+      -webkit-transition-delay: 0.5s;
       transition-delay: 0.5s; }
     .header .menu .menu__items.menu__active .menu__item:nth-child(4) {
+      -webkit-transform: translate(-1vh, 9vh);
       transform: translate(-1vh, 9vh);
+      -webkit-transition-delay: 0.3s;
       transition-delay: 0.3s; }
     .header .menu .menu__items.menu__active .menu__item:nth-child(5) {
+      -webkit-transform: translate(5vh, 6vh);
       transform: translate(5vh, 6vh);
+      -webkit-transition-delay: 0.1s;
       transition-delay: 0.1s; } }
 
 .price {
@@ -225,15 +277,20 @@ p, ul, li {
       background: #000;
       z-index: 95; }
       .price .price__full .price__full__service.bcg__active__right {
+        -webkit-transform: translateX(100%);
         transform: translateX(100%);
         z-index: 96;
+        -webkit-transition: .5s;
         transition: .5s; }
       .price .price__full .price__full__service.bcg__active__left {
+        -webkit-transform: translateX(-100%);
         transform: translateX(-100%);
         z-index: 96;
+        -webkit-transition: .5s;
         transition: .5s; }
       .price .price__full .price__full__service.bcg__active {
         z-index: 98;
+        -webkit-transform: translateX(0);
         transform: translateX(0); }
       .price .price__full .price__full__service:nth-child(1) {
         background: url("../img/car__showroom2.jpg") no-repeat;
@@ -262,13 +319,24 @@ p, ul, li {
       height: 100%;
       width: 100%;
       list-style: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: left;
+      -ms-flex-pack: left;
       justify-content: left;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center; }
       .price .price__services ul .price__service {
         cursor: pointer;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-transition: 0.5s;
         transition: 0.5s;
         width: 22%;
         height: 80%;
@@ -277,10 +345,18 @@ p, ul, li {
         font-size: 1em;
         font-family: "Montserrat-ExtraBold", sans-serif; }
         .price .price__services ul .price__service .price__service__content {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
           align-items: center;
+          -webkit-box-pack: left;
+          -ms-flex-pack: left;
           justify-content: left; }
     .price .price__services .price__arrows {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       position: absolute;
       top: -40%;
@@ -290,19 +366,24 @@ p, ul, li {
         margin: 1vh;
         color: #fff;
         font-size: 2em;
+        -webkit-transition: .5s;
         transition: .5s; }
         .price .price__services .price__arrows .price__arrow:hover {
           color: #e33d3d; }
 
 @media screen and (min-width: 761px) {
   .price .price__services ul .price__service .price__service__content {
+    -webkit-transition: 0.5s;
     transition: 0.5s;
+    -webkit-transform: translateX(-40%);
     transform: translateX(-40%); }
     .price .price__services ul .price__service .price__service__content .icon {
       margin-left: 5%;
       font-size: 3em; }
     .price .price__services ul .price__service .price__service__content span {
+      -webkit-transform: translateX(20%);
       transform: translateX(20%);
+      -webkit-transition: 0.5s;
       transition: 0.5s;
       display: block;
       margin-left: 10%; }
@@ -310,9 +391,11 @@ p, ul, li {
     height: 100%;
     border-color: #e33d3d; }
     .price .price__services ul .price__service.active .price__service__content, .price .price__services ul .price__service:hover .price__service__content {
+      -webkit-transform: translateX(0%);
       transform: translateX(0%);
       color: #e33d3d; }
       .price .price__services ul .price__service.active .price__service__content span, .price .price__services ul .price__service:hover .price__service__content span {
+        -webkit-transform: translateX(0%);
         transform: translateX(0%);
         color: #e33d3d; } }
 
@@ -320,6 +403,9 @@ p, ul, li {
   .price .price__services ul .price__service {
     height: 100%; }
     .price .price__services ul .price__service .price__service__content {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column; }
       .price .price__services ul .price__service .price__service__content .icon {
         font-size: 3em;
@@ -336,6 +422,8 @@ p, ul, li {
   .price .price__services .price__arrows {
     top: -45%;
     width: 90%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between; }
     .price .price__services .price__arrows .price__arrow {
       font-size: 4em; } }
@@ -345,8 +433,15 @@ p, ul, li {
   background-size: cover; }
   .action .container {
     text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     color: #fff;
     font-family: "Montserrat-Bold", sans-serif; }
@@ -382,7 +477,11 @@ p, ul, li {
     height: 100%;
     margin: 0 5%;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     overflow: hidden; }
     .manufacturer .manufacturer__full .manufacturer__full__content {
@@ -408,17 +507,21 @@ p, ul, li {
           bottom: 0;
           left: 0;
           height: 100%;
+          -webkit-transform: translateX(100%);
           transform: translateX(100%);
+          -webkit-transition: .5s;
           transition: .5s;
           z-index: 1;
           opacity: 0; }
           .manufacturer .manufacturer__full .manufacture__full__car__wrap .manufacture__full__car .manufacture__full__car__img.active {
+            -webkit-transform: translateX(0);
             transform: translateX(0);
             z-index: 91;
             opacity: 1; }
           .manufacturer .manufacturer__full .manufacture__full__car__wrap .manufacture__full__car .manufacture__full__car__img.prev__active {
             z-index: 90;
             opacity: 0;
+            -webkit-transform: translateX(-100%);
             transform: translateX(-100%); }
   .manufacturer .manufacturer__car {
     z-index: 99;
@@ -428,7 +531,11 @@ p, ul, li {
     right: 5%;
     width: 90%;
     height: 16vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center; }
     .manufacturer .manufacturer__car .manufacturer__car__item {
       padding: 0 3%;
@@ -436,8 +543,13 @@ p, ul, li {
       height: 100%;
       width: calc(100% / 6);
       border: 2px solid #000;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-transition: .5s;
       transition: .5s; }
       .manufacturer .manufacturer__car .manufacturer__car__item img {
         width: 100%; }
