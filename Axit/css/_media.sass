@@ -1,0 +1,216 @@
+@media screen and (min-width: 1921px)
+  .container
+    width: 1860px
+  .header
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/header__bcg_quality.jpg) no-repeat center bottom
+    background-size: cover
+  .btn
+    &.btn__white
+      &:before
+      border-top: solid 4px
+      border-bottom: solid 4px
+      &:after
+        border-left: solid 4px
+        border-right: solid 4px
+//1601-1920
+@media screen and (max-width: 1920px)
+  .container
+    width: 1540px
+  .header
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/header__bcg.jpg) no-repeat center bottom
+//1369-1600
+@media screen and (max-width: 1600px)
+  .container
+    width: 1200px
+//1121-1368
+@media screen and (max-width: 1368px)
+  .container
+    width: 1040px
+//961-1120
+@media screen and (max-width: 1120px)
+  .container
+    width: 900px
+//960++
+@media screen and (min-width: 960px)
+  .card
+    position: relative
+    width: 100%
+    height: 29vh
+    perspective: 1000px
+    .front, .back
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      backface-visibility: hidden
+      transition: 1s
+    .back
+      transform: rotateY(180deg)
+    .front
+      background: #333333
+    &:hover
+      .front
+        transform: rotateY(180deg)
+      .back
+        transform: rotateY(360deg)
+//761-960
+@media screen and (max-width: 960px)
+  .container
+    width: 720px
+  .nav__bar
+    &.add__bcg
+      background: rgb(0,0,0)
+    .menu
+      padding-bottom: 2px
+      .menu__items
+        transition: 0.5s  all ease
+        height: 92vh
+        transform: translateX(100%)
+        display: flex
+        flex-direction: column
+        justify-content: center
+        position: absolute
+        right: 0
+        top: 8vh
+        background: #000000
+        text-align: center
+        width: 50%
+        .menu__item
+          &:nth-child(1)
+            border-top: 2px solid #ffffff
+          &:before
+            content: ''
+            position: absolute
+            top: -2px
+            left: 0
+            right: 0
+            width: 100%
+            border-top: solid 2px $orange
+            transform: scaleX(0)
+            transition: 0.75s
+        &.menu__items__active
+          transform: translateX(0%)
+      .menu__btn__bcg
+        height: 6vh
+        width: 6vh
+        background: #fff
+        border-radius: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        .menu__btn
+          display: flex
+          justify-content: center
+          align-items: center
+          background: transparent
+          border: none
+          span
+            transition: none
+          span, span:after, span:before
+            display: block
+            width: 3vh
+            height: 2px
+            background: #000
+            transition: 0.3s all ease
+          span:after, span:before
+            content: ""
+          span:after
+            transform: translateY(4px)
+          span:before
+            transform: translateY(-6px)
+          &.menu__btn__active
+            span
+              margin-top: -4px
+              height: 0
+              &:before
+                transform: rotate(-45deg) translateY(1px)
+                transform-origin: center center
+              &:after
+                transform: rotate(45deg) translateY(-1px)
+                transform-origin: center center
+  .header
+    .header__content
+      .headline
+        font-size: 3em
+  .brand__bar
+    padding: 7vh 0
+    .container
+      flex-direction: column
+      .brand__bar__content, .brand__bar__icon
+        width: 100%
+        text-align: center
+      .brand__bar__icon
+        a
+          font-size: 2.5em
+          display: block
+  .feature1
+    .container
+      flex-direction: column
+      .feature1__tabs
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        .tab
+          width: 25%
+          height: 8vh
+          line-height: 8vh
+          margin: 0 2px
+      .feature1__content
+        text-align: center
+        max-width: 80%
+        margin: 5% 0
+        transition: 0.3s
+        &.active
+          display: block
+      .feature1__image
+        max-width: 80%
+
+        &.active
+          display: block
+  .feature
+    .container
+      flex-direction: column
+      .feature__content
+        width: 100%
+        text-align: center
+        .divider
+          margin: 3vh auto
+      .feature__img
+        width: 100%
+        margin-top: 5vh
+  .feature2
+    .container
+      flex-direction: column-reverse
+  .items
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    .item
+      margin: 5vh 0
+      width: 80%
+      max-width: 80%
+      text-align: center
+  .contact
+    .contact__form
+      .form__area
+        //width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        //justify-content: center
+        .left__form
+          width: 80%
+        .right__form
+          width: 80%
+          .contact__textarea
+            width: 100%
+//481-760
+@media screen and (max-width: 760px)
+  .container
+    width: 90%
+//320-480
