@@ -75,7 +75,7 @@ $time: .5s
     .price__arrows
       display: flex
       position: absolute
-      top: -35%
+      top: -40%
       left: 5%
       .price__arrow
         cursor: pointer
@@ -83,7 +83,6 @@ $time: .5s
         color: #fff
         font-size: 2em
         transition: .5s
-        //transition: top 0.5s ease-out
         &:hover
           color: $pink
 @media screen and (min-width: 761px)
@@ -132,6 +131,9 @@ $time: .5s
               color: $pink
               span
                 color: $pink
-    .price__arrows
-      width: 90%
-      justify-content: space-between
+      .price__arrows
+        top: -45%
+        width: 90%
+        justify-content: space-between
+        .price__arrow
+          font-size: 4em

@@ -16,7 +16,7 @@ section {
   width: 100%;
   height: 100vh;
   transform: translateY(-100%);
-  transition: 0.5s;
+  transition: .5s;
   z-index: 1; }
   section.active {
     transform: translateY(0);
@@ -50,7 +50,7 @@ p, ul, li {
   background: none;
   cursor: pointer;
   border-color: #fff;
-  transition: 0.5s; }
+  transition: .5s; }
   .btn:active, .btn:focus {
     outline: none; }
   .btn.btn__red:hover {
@@ -137,76 +137,80 @@ p, ul, li {
       transform: scaleY(1); }
     .header .menu .menu__items .menu__item.active:before {
       transform: scaleY(1); } }
+
 @media screen and (max-width: 760px), screen and (orientation: portrait) {
-  .header .menu .mobile__menu {
-    position: absolute;
-    right: 4vh;
-    top: 5vh;
-    display: block;
-    width: 6vh;
-    height: 6vh;
-    background-color: #fff;
-    border-radius: 50%;
-    z-index: 6;
-    overflow: hidden; }
-    .header .menu .mobile__menu .menu__button {
+  .header {
+    font-size: 1.5vmin; }
+    .header .menu .mobile__menu {
+      position: absolute;
+      right: 4vh;
+      top: 5vh;
       display: block;
-      z-index: 7;
-      height: 100%;
-      width: 100%; }
-      .header .menu .mobile__menu .menu__button span, .header .menu .mobile__menu .menu__button span:before, .header .menu .mobile__menu .menu__button span:after {
-        position: absolute;
-        top: 50%;
-        margin-top: -1px;
-        left: 50%;
-        margin-left: -1.5vh;
-        height: 2px;
-        width: 3vh;
-        background: #000;
-        transition: 1s; }
-      .header .menu .mobile__menu .menu__button span:before, .header .menu .mobile__menu .menu__button span:after {
-        content: "";
-        display: block; }
-      .header .menu .mobile__menu .menu__button span:before {
-        transform: translateY(-1.2vh); }
-      .header .menu .mobile__menu .menu__button span:after {
-        transform: translateY(1.2vh); }
-      .header .menu .mobile__menu .menu__button__active span {
-        height: 0; }
-        .header .menu .mobile__menu .menu__button__active span:before {
-          transform: rotate(-45deg);
-          transform-origin: center; }
-        .header .menu .mobile__menu .menu__button__active span:after {
-          transform: rotate(45deg);
-          transform-origin: center; }
-  .header .menu .menu__items .menu__item {
-    transition: 0.5s;
-    position: absolute;
-    right: 5vh;
-    top: 6vh; }
-    .header .menu .menu__items .menu__item:hover a .menu__icon, .header .menu .menu__items .menu__item.active a .menu__icon {
-      color: red; }
-    .header .menu .menu__items .menu__item a span {
-      display: none; }
-    .header .menu .menu__items .menu__item a .menu__icon {
+      width: 6vh;
+      height: 6vh;
+      background-color: #fff;
+      border-radius: 50%;
+      z-index: 6;
+      overflow: hidden; }
+      .header .menu .mobile__menu .menu__button {
+        display: block;
+        z-index: 7;
+        height: 100%;
+        width: 100%; }
+        .header .menu .mobile__menu .menu__button span, .header .menu .mobile__menu .menu__button span:before, .header .menu .mobile__menu .menu__button span:after {
+          position: absolute;
+          top: 50%;
+          margin-top: -1px;
+          left: 50%;
+          margin-left: -1.5vh;
+          height: 2px;
+          width: 3vh;
+          background: #000;
+          transition: 1s; }
+        .header .menu .mobile__menu .menu__button span:before, .header .menu .mobile__menu .menu__button span:after {
+          content: "";
+          display: block; }
+        .header .menu .mobile__menu .menu__button span:before {
+          transform: translateY(-1.2vh); }
+        .header .menu .mobile__menu .menu__button span:after {
+          transform: translateY(1.2vh); }
+        .header .menu .mobile__menu .menu__button__active span {
+          height: 0; }
+          .header .menu .mobile__menu .menu__button__active span:before {
+            transform: rotate(-45deg);
+            transform-origin: center; }
+          .header .menu .mobile__menu .menu__button__active span:after {
+            transform: rotate(45deg);
+            transform-origin: center; }
+    .header .menu .menu__items .menu__item {
       transition: 0.5s;
-      z-index: 5;
-      font-size: 3em; }
-  .header .menu .menu__items.menu__active .menu__item:nth-child(1) {
-    transform: translate(-5vh, -4vh);
-    transition-delay: 0.2s; }
-  .header .menu .menu__items.menu__active .menu__item:nth-child(2) {
-    transform: translate(-9vh, 1vh);
-    transition-delay: 0.4s; }
-  .header .menu .menu__items.menu__active .menu__item:nth-child(3) {
-    transform: translate(-7vh, 7vh);
-    transition-delay: 0.5s; }
-  .header .menu .menu__items.menu__active .menu__item:nth-child(4) {
-    transform: translate(-1vh, 9vh);
-    transition-delay: 0.3s; }
-  .header .menu .menu__items.menu__active .menu__item:nth-child(5) {
-    transform: translate(5vh, 6vh);
-    transition-delay: 0.1s; } }
+      position: absolute;
+      right: 5vh;
+      top: 6vh; }
+      .header .menu .menu__items .menu__item:hover a .menu__icon, .header .menu .menu__items .menu__item.active a .menu__icon {
+        color: red; }
+      .header .menu .menu__items .menu__item a span {
+        display: none; }
+      .header .menu .menu__items .menu__item a .menu__icon {
+        transition: 0.5s;
+        z-index: 5;
+        font-size: 3em; }
+    .header .menu .menu__items.menu__active .menu__item:nth-child(1) {
+      transform: translate(-5vh, -4vh);
+      transition-delay: 0.2s; }
+    .header .menu .menu__items.menu__active .menu__item:nth-child(2) {
+      transform: translate(-9vh, 1vh);
+      transition-delay: 0.4s; }
+    .header .menu .menu__items.menu__active .menu__item:nth-child(3) {
+      transform: translate(-7vh, 7vh);
+      transition-delay: 0.5s; }
+    .header .menu .menu__items.menu__active .menu__item:nth-child(4) {
+      transform: translate(-1vh, 9vh);
+      transition-delay: 0.3s; }
+    .header .menu .menu__items.menu__active .menu__item:nth-child(5) {
+      transform: translate(5vh, 6vh);
+      transition-delay: 0.1s; } }
+
 .price {
   position: relative; }
   .price .price__full {
@@ -223,11 +227,11 @@ p, ul, li {
       .price .price__full .price__full__service.bcg__active__right {
         transform: translateX(100%);
         z-index: 96;
-        transition: 0.5s; }
+        transition: .5s; }
       .price .price__full .price__full__service.bcg__active__left {
         transform: translateX(-100%);
         z-index: 96;
-        transition: 0.5s; }
+        transition: .5s; }
       .price .price__full .price__full__service.bcg__active {
         z-index: 98;
         transform: translateX(0); }
@@ -279,14 +283,14 @@ p, ul, li {
     .price .price__services .price__arrows {
       display: flex;
       position: absolute;
-      top: -35%;
+      top: -40%;
       left: 5%; }
       .price .price__services .price__arrows .price__arrow {
         cursor: pointer;
         margin: 1vh;
         color: #fff;
         font-size: 2em;
-        transition: 0.5s; }
+        transition: .5s; }
         .price .price__services .price__arrows .price__arrow:hover {
           color: #e33d3d; }
 
@@ -311,6 +315,7 @@ p, ul, li {
       .price .price__services ul .price__service.active .price__service__content span, .price .price__services ul .price__service:hover .price__service__content span {
         transform: translateX(0%);
         color: #e33d3d; } }
+
 @media screen and (max-width: 760px) {
   .price .price__services ul .price__service {
     height: 100%; }
@@ -328,9 +333,13 @@ p, ul, li {
         color: #e33d3d; }
         .price .price__services ul .price__service.active .price__service__content span, .price .price__services ul .price__service:hover .price__service__content span {
           color: #e33d3d; }
-  .price .price__arrows {
+  .price .price__services .price__arrows {
+    top: -45%;
     width: 90%;
-    justify-content: space-between; } }
+    justify-content: space-between; }
+    .price .price__services .price__arrows .price__arrow {
+      font-size: 4em; } }
+
 .action {
   background: url("../img/car__muscle.jpg");
   background-size: cover; }
@@ -400,7 +409,7 @@ p, ul, li {
           left: 0;
           height: 100%;
           transform: translateX(100%);
-          transition: 0.5s;
+          transition: .5s;
           z-index: 1;
           opacity: 0; }
           .manufacturer .manufacturer__full .manufacture__full__car__wrap .manufacture__full__car .manufacture__full__car__img.active {
@@ -429,7 +438,7 @@ p, ul, li {
       border: 2px solid #000;
       display: flex;
       align-items: center;
-      transition: 0.5s; }
+      transition: .5s; }
       .manufacturer .manufacturer__car .manufacturer__car__item img {
         width: 100%; }
       .manufacturer .manufacturer__car .manufacturer__car__item.active, .manufacturer .manufacturer__car .manufacturer__car__item:hover {
@@ -439,6 +448,7 @@ p, ul, li {
 @media screen and (max-width: 760px) {
   .manufacturer .manufacturer__car .manufacturer__car__item {
     height: auto; } }
+
 .reviews {
   background: url("../img/car__engine2.jpg");
   background-size: cover; }
@@ -446,5 +456,3 @@ p, ul, li {
 .contact {
   background: url("../img/car__engine.jpg");
   background-size: cover; }
-
-/*# sourceMappingURL=config.css.map */

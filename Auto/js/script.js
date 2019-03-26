@@ -126,7 +126,6 @@ function nextManufacturerCar(nextCar) {
 // script to work menu button
 document.getElementById("menu__button").addEventListener('click', function(e) {
     e.preventDefault();
-    console.log("click to menu");
     this.classList.toggle('menu__button__active');
     // document.querySelector("menu__items").classList.toggle("menu__active");
     document.getElementsByClassName("menu__items")[0].classList.toggle("menu__active");
