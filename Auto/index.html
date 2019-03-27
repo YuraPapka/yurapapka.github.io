@@ -165,12 +165,24 @@
     </div>
 </section>
 <section class="contact" id="contact">
-    <div class="center">
-        <div class="text">
-        Контент в процессе реализации
+    <div class="contact__content">
+        <h3 class="contact__title">Мы находимся здесь:</h3>
+        <div class="contact__address">
+            Киев, Площадь Независимости, №1
+        </div>
+        <div class="contact__phone">
+            Наш телефон:
+        </div>
+        <div class="contact__number">
+            <a href="tel:8 800 900 7070">8 800 900 7070</a>
+        </div>
+
     </div>
-    </div>
+    <div class="contact__map" id="map"></div>
 </section>
 <script src="js/script.js"></script>
+<script src="js/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJdnBAWXPCh2IqA8-uMBKFvXasTJa6l-w&callback=initMap"
+        async defer></script>
 </body>
 </html>

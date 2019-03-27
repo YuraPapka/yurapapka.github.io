@@ -2,6 +2,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-size: 2vmin;
+  font-size: 2vmin;
   overflow: hidden; }
 
 .body {
@@ -432,7 +433,7 @@ p, ul, li {
         .price .price__services ul .price__service.active .price__service__content span, .price .price__services ul .price__service:hover .price__service__content span {
           color: #e33d3d; }
   .price .price__services .price__arrows {
-    top: -45%;
+    top: -50%;
     width: 90%;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -580,3 +581,39 @@ p, ul, li {
 .contact {
   background: url("../img/car__engine.jpg");
   background-size: cover; }
+  .contact .contact__content {
+    margin: 0 5%;
+    color: #fff;
+    height: 50vh;
+    width: 90%;
+    font-family: 'Montserrat-ExtraBold', sans-serif;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .contact .contact__content .contact__title {
+      margin-top: 10vh;
+      font-size: 1.5em; }
+    .contact .contact__content .contact__address {
+      margin-left: 2%;
+      font-size: 1.1em; }
+    .contact .contact__content .contact__phone {
+      margin-top: 2vh;
+      font-size: 1.5em; }
+    .contact .contact__content .contact__number {
+      margin: 2vh 0 0 2%; }
+      .contact .contact__content .contact__number a {
+        text-decoration: none;
+        color: #e33d3d;
+        font-size: 1.5em; }
+  .contact .contact__map {
+    position: absolute;
+    bottom: 0;
+    height: 50vh;
+    width: 100%; }

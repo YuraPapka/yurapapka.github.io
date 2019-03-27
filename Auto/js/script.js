@@ -17,11 +17,15 @@ function turnPages(nextPage) {
     if(prevPage === nextPage) return false;
     // console.log(prevPage + " -> " + nextPage);
     let pages = document.getElementsByTagName("section");
-    if(nextPage === 2) {
+    if(nextPage === 2 || nextPage === 4) {
         document.getElementById("header").classList.add("black");
     }
-    if(prevPage === 2) {
+    if(prevPage === 2 && nextPage !== 4) {
         document.getElementById("header").classList.remove("black");
+    }
+    if(nextPage === 4 && nextPage !== 2) {
+        document.getElementById("header").classList.remove("black");
+
     }
     pages[prevPage].classList.add("prev__active");
     pages[prevPage].classList.remove("active");
