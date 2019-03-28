@@ -134,3 +134,71 @@ document.getElementById("menu__button").addEventListener('click', function(e) {
     // document.querySelector("menu__items").classList.toggle("menu__active");
     document.getElementsByClassName("menu__items")[0].classList.toggle("menu__active");
 });
+//code for form processing
+
+document.getElementById("reviewForm").addEventListener('submit', function(e) {
+    e.preventDefault();
+    let str = '',
+        obj = {},
+        name = document.getElementById('form__name'),
+        email = document.getElementById('form__email'),
+        text = document.getElementById('form__textarea');
+    if(validateEmail(email.value)) {
+        if(name.value === '') {
+            alert('Введите имя!');
+            return false;
+        }
+        if(text.value !== "")
+            createComment(name.value, text.value);
+        obj["name"] = name.value;
+        obj["email"] = email.value;
+        obj["text"] = text.value;
+        str = JSON.stringify(obj);
+        console.log(str);
+        name.value = '';
+        email.value = '';
+        text.value = '';
+    } else alert('Ваш e-mail не коректен!');
+    function validateEmail(mail) {
+        let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(mail).toLowerCase());
+
+    }
+});
+
+function createComment(name, text) {
+
+    let comment = document.getElementById("comment");
+    let newComment = document.createElement("div");
+    let commentImg = document.createElement("div");
+    let commentContent = document.createElement("div");
+    let commentName = document.createElement("div");
+    let commentText = document.createElement("div");
+
+    newComment.className = "comment";
+    commentImg.className = "comment__img";
+    commentContent.className = "comment__content";
+    commentName.className = "comment__content__name";
+    commentText.className = "comment__content__text";
+
+    commentName.innerHTML = name;
+    commentText.innerHTML = text;
+
+    commentContent.appendChild(commentName);
+    commentContent.appendChild(commentText);
+
+
+    newComment.appendChild(commentImg);
+    newComment.appendChild(commentContent);
+
+
+    //if comment don't fit reviews__comment
+    let commentChildren = comment.children;
+    if (commentChildren.length > 3) {
+        comment.removeChild(commentChildren[0]);
+    } else {
+        document.getElementsByClassName("reviews__title")[0].style.display = "none";
+    }
+
+    comment.appendChild(newComment);
+}

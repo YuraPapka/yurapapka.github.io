@@ -28,21 +28,6 @@ section {
   section.prev__active {
     -webkit-transform: translateY(100%);
     transform: translateY(100%); }
-  section .center {
-    width: 100%;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
-    section .center .text {
-      width: 100%;
-      text-align: center;
-      color: #fff;
-      font-size: 5em;
-      font-family: "Montserrat-Bold", sans-serif; }
 
 p, ul, li {
   margin: 0;
@@ -577,6 +562,79 @@ p, ul, li {
 .reviews {
   background: url("../img/car__engine2.jpg");
   background-size: cover; }
+  .reviews .container .reviews__comment {
+    color: #fff;
+    width: 100%;
+    margin-top: 20vh;
+    height: 40vh;
+    overflow: hidden; }
+    .reviews .container .reviews__comment .reviews__title {
+      text-align: center; }
+    .reviews .container .reviews__comment .comment {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: left;
+      -ms-flex-pack: left;
+      justify-content: left;
+      margin-top: 1vh; }
+      .reviews .container .reviews__comment .comment .comment__img {
+        width: 8vh;
+        height: 8vh;
+        background: #000000; }
+      .reviews .container .reviews__comment .comment .comment__content {
+        min-width: 50%;
+        margin-left: 2vh; }
+        .reviews .container .reviews__comment .comment .comment__content .comment__content__name {
+          font-size: 2em; }
+        .reviews .container .reviews__comment .comment .comment__content .comment__content__text {
+          margin-top: 0.5vh;
+          font-size: 1em; }
+  .reviews .reviews__form {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh; }
+    .reviews .reviews__form #reviewForm {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .reviews .reviews__form .review__input {
+      font-size: 1em;
+      max-width: 600px;
+      margin-top: 0.5vh;
+      width: 80%;
+      border: 1px solid #000;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 1vh 2vh; }
+      .reviews .reviews__form .review__input.textarea {
+        resize: none;
+        padding: 1vh 2vh; }
+      .reviews .reviews__form .review__input:focus {
+        color: #fff;
+        outline: none; }
+      .reviews .reviews__form .review__input:-webkit-autofill, .reviews .reviews__form .review__input :-webkit-autofill:hover, .reviews .reviews__form .review__input :-webkit-autofill:focus, .reviews .reviews__form .review__input :-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 1000px black inset;
+        -webkit-text-fill-color: #fff; }
+      .reviews .reviews__form .review__input::-webkit-input-placeholder {
+        color: #fff; }
+      .reviews .reviews__form .review__input:-ms-input-placeholder {
+        color: #fff; }
+      .reviews .reviews__form .review__input::-ms-input-placeholder {
+        color: #fff; }
+      .reviews .reviews__form .review__input::placeholder {
+        color: #fff; }
+    .reviews .reviews__form .review__btn {
+      margin-top: 0.5vh; }
 
 .contact {
   background: url("../img/car__engine.jpg");
