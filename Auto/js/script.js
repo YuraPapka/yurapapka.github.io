@@ -17,16 +17,16 @@ function turnPages(nextPage) {
     if(prevPage === nextPage) return false;
     // console.log(prevPage + " -> " + nextPage);
     let pages = document.getElementsByTagName("section");
-    if(nextPage === 2 || nextPage === 4) {
+    if(nextPage === 2) {
         document.getElementById("header").classList.add("black");
-    }
-    if(prevPage === 2 && nextPage !== 4) {
+    } else if(prevPage === 2) {
         document.getElementById("header").classList.remove("black");
     }
-    if(nextPage === 4 && nextPage !== 2) {
-        document.getElementById("header").classList.remove("black");
 
+    if(prevPage === 1) {
+        addActionForm(false);
     }
+
     pages[prevPage].classList.add("prev__active");
     pages[prevPage].classList.remove("active");
     pages[nextPage].classList.add("active");
@@ -195,7 +195,6 @@ document.getElementById("reviewForm").addEventListener('submit', function(e) {
         email.value = '';
         text.value = '';
     } else alert('Ваш e-mail не коректен!');
-
 });
 
 function jsonTransform(name, email, text) {

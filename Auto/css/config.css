@@ -85,13 +85,13 @@ p, ul, li {
       -webkit-box-shadow: 0 0 0 1000px black inset;
       -webkit-text-fill-color: #fff; }
     .form .input::-webkit-input-placeholder {
-      color: #fff; }
+      color: #999999; }
     .form .input:-ms-input-placeholder {
-      color: #fff; }
+      color: #999999; }
     .form .input::-ms-input-placeholder {
-      color: #fff; }
+      color: #999999; }
     .form .input::placeholder {
-      color: #fff; }
+      color: #999999; }
   .form .form__btn {
     margin-top: 3vh;
     padding: 1vh 2vh; }
