@@ -721,12 +721,14 @@ p, ul, li {
       margin-top: 10vh;
       font-size: 1.5em; }
     .contact .contact__content .contact__address {
+      font-family: 'Montserrat-Light', sans-serif;
       margin-left: 2%;
       font-size: 1.1em; }
     .contact .contact__content .contact__phone {
       margin-top: 2vh;
       font-size: 1.5em; }
     .contact .contact__content .contact__number {
+      font-family: 'Montserrat-Light', sans-serif;
       margin: 2vh 0 0 2%; }
       .contact .contact__content .contact__number a {
         text-decoration: none;
