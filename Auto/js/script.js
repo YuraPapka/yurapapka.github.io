@@ -169,6 +169,12 @@ document.getElementById("actionForm").addEventListener('submit', function(e) {
             return ;
         }
         jsonTransform(name.value, email.value, text.value);
+
+        addActionForm(false);
+
+        name.value = '';
+        email.value = '';
+        text.value = '';
     }
 
 });
