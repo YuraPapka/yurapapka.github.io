@@ -69,10 +69,26 @@
 </header>
 <section class="price active" id="price">
     <div class="price__full">
-        <div class="price__full__service bcg__active bcg__active__left"></div>
-        <div class="price__full__service bcg__active__left"></div>
-        <div class="price__full__service bcg__active__left"></div>
-        <div class="price__full__service bcg__active__left"></div>
+        <div class="price__full__service bcg__active bcg__active__left">
+            <div class="price__content">
+                Какой угодно контент!
+            </div>
+        </div>
+        <div class="price__full__service bcg__active__left">
+            <div class="price__content">
+                Какой угодно контент!
+            </div>
+        </div>
+        <div class="price__full__service bcg__active__left">
+            <div class="price__content">
+                Какой угодно контент!
+            </div>
+        </div>
+        <div class="price__full__service bcg__active__left">
+            <div class="price__content">
+                Какой угодно контент!
+            </div>
+        </div>
     </div>
     <div class="price__services">
         <ul>
@@ -116,7 +132,17 @@
             Ремонт Ford в июле
             со скидкой 15%
         </h2>
-        <button class="btn btn__red action__btn">Записаться</button>
+        <button class="btn btn__red action__btn" id="activateForm">Записаться</button>
+    </div>
+    //modal window
+    <div class="modal" id="modal">
+        <a class="close__form" id="closeForm">+</a>
+        <form class="form action__form" action="#" id="actionForm">
+            <input name="action__form" class="action__input input" type="text" placeholder="Имя" id="actionForm__name">
+            <input name="action__form" class="action__input input" type="email" placeholder="Почта" id="actionForm__email">
+            <textarea name="action__form" class="action__textarea input textarea" id="actionForm__textarea" cols="255" rows="10" placeholder="Что вам нужно сделать?" ></textarea>
+            <button type="submit" name="action__form" class="btn btn__red form__btn" id="actionForm__submit">Отправить</button>
+        </form>
     </div>
 </section>
 <section class="manufacturer" id="manufacturer">
@@ -177,11 +203,11 @@
         </div>
     </div>
     <div class="reviews__form">
-        <form action="#" id="reviewForm">
-            <input name="review__form" class="review__input input" type="text" placeholder="Name" id="form__name">
-            <input name="review__form" class="review__input input" type="email" placeholder="Email" id="form__email">
-            <textarea name="review__form" class="review__input textarea" id="form__textarea" cols="255" rows="10" placeholder="Message" ></textarea>
-            <button name="review__form" class="btn btn__red review__btn" id="form__submit">Send Message</button>
+        <form class="form" action="#" id="reviewForm">
+            <input name="review__form" class="review__input input" type="text" placeholder="Имя" id="form__name">
+            <input name="review__form" class="review__input input" type="email" placeholder="Почта" id="form__email">
+            <textarea name="review__form" class="review__input input textarea" id="form__textarea" cols="255" rows="10" placeholder="Отзыв" ></textarea>
+            <button name="review__form" type="submit" class="btn btn__red form__btn" id="form__submit">Добавить</button>
         </form>
     </div>
 </section>
@@ -189,7 +215,7 @@
     <div class="contact__content">
         <h3 class="contact__title">Мы находимся здесь:</h3>
         <div class="contact__address">
-            Киев, Площадь Независимости, №1
+            Киев, Площадь Независимости, дом. №1
         </div>
         <div class="contact__phone">
             Наш телефон:

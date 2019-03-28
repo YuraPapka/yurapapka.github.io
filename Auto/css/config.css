@@ -54,6 +54,48 @@ p, ul, li {
     border-color: #f64041;
     color: #f64041; }
 
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .form .input {
+    font-size: 1em;
+    max-width: 600px;
+    margin-top: 0.5vh;
+    width: 80%;
+    border: 1px solid #fff;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 1vh 2vh; }
+    .form .input.textarea {
+      resize: none;
+      padding: 1vh 2vh;
+      max-height: 15vh; }
+    .form .input:focus {
+      color: #fff;
+      outline: none; }
+    .form .input:-webkit-autofill, .form .input :-webkit-autofill:hover, .form .input :-webkit-autofill:focus, .form .input :-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 1000px black inset;
+      -webkit-text-fill-color: #fff; }
+    .form .input::-webkit-input-placeholder {
+      color: #fff; }
+    .form .input:-ms-input-placeholder {
+      color: #fff; }
+    .form .input::-ms-input-placeholder {
+      color: #fff; }
+    .form .input::placeholder {
+      color: #fff; }
+  .form .form__btn {
+    margin-top: 3vh;
+    padding: 1vh 2vh; }
+
 .header {
   z-index: 999;
   width: 100%;
@@ -273,7 +315,16 @@ p, ul, li {
       width: 100%;
       height: 100vh;
       background: #000;
-      z-index: 95; }
+      z-index: 95;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
       .price .price__full .price__full__service.bcg__active__right {
         -webkit-transform: translateX(100%);
         transform: translateX(100%);
@@ -302,6 +353,9 @@ p, ul, li {
       .price .price__full .price__full__service:nth-child(4) {
         background: url("../img/car__home.jpg") no-repeat;
         background-size: cover; }
+      .price .price__full .price__full__service .price__content {
+        font-size: 2em;
+        color: #fff; }
   .price .price__services {
     z-index: 999;
     margin-bottom: 4vh;
@@ -465,6 +519,53 @@ p, ul, li {
       padding: 1.5vh 3vh;
       font-size: 1.6em;
       letter-spacing: 0.3em; }
+  .action .modal {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .action .modal .close__form {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      position: absolute;
+      top: 25%;
+      right: 8%;
+      height: 3vh;
+      width: 3vh;
+      border-radius: 50%;
+      -webkit-transition: .5s;
+      transition: .5s;
+      font-size: 4vh;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      color: #fff;
+      cursor: pointer; }
+      .action .modal .close__form:hover {
+        -webkit-box-shadow: 0 0 10px;
+        box-shadow: 0 0 10px; }
+    .action .modal.active {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
 
 .manufacturer {
   background: #fff;
@@ -596,45 +697,6 @@ p, ul, li {
     left: 0;
     width: 100%;
     height: 40vh; }
-    .reviews .reviews__form #reviewForm {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center; }
-    .reviews .reviews__form .review__input {
-      font-size: 1em;
-      max-width: 600px;
-      margin-top: 0.5vh;
-      width: 80%;
-      border: 1px solid #000;
-      background: rgba(0, 0, 0, 0.6);
-      color: #fff;
-      padding: 1vh 2vh; }
-      .reviews .reviews__form .review__input.textarea {
-        resize: none;
-        padding: 1vh 2vh; }
-      .reviews .reviews__form .review__input:focus {
-        color: #fff;
-        outline: none; }
-      .reviews .reviews__form .review__input:-webkit-autofill, .reviews .reviews__form .review__input :-webkit-autofill:hover, .reviews .reviews__form .review__input :-webkit-autofill:focus, .reviews .reviews__form .review__input :-webkit-autofill:active {
-        -webkit-box-shadow: 0 0 0 1000px black inset;
-        -webkit-text-fill-color: #fff; }
-      .reviews .reviews__form .review__input::-webkit-input-placeholder {
-        color: #fff; }
-      .reviews .reviews__form .review__input:-ms-input-placeholder {
-        color: #fff; }
-      .reviews .reviews__form .review__input::-ms-input-placeholder {
-        color: #fff; }
-      .reviews .reviews__form .review__input::placeholder {
-        color: #fff; }
-    .reviews .reviews__form .review__btn {
-      margin-top: 0.5vh; }
 
 .contact {
   background: url("../img/car__engine.jpg");

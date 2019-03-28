@@ -134,38 +134,88 @@ document.getElementById("menu__button").addEventListener('click', function(e) {
     // document.querySelector("menu__items").classList.toggle("menu__active");
     document.getElementsByClassName("menu__items")[0].classList.toggle("menu__active");
 });
-//code for form processing
+// activate action modal
 
-document.getElementById("reviewForm").addEventListener('submit', function(e) {
+document.getElementById("activateForm").addEventListener("click", () => addActionForm(true));
+document.getElementById("closeForm").addEventListener("click", () => addActionForm(false));
+
+let addActionForm = (bool) => {
+    let modal = document.getElementById("modal");
+    if(bool) {
+        modal.classList.add("active");
+    } else {
+        modal.classList.remove("active");
+    }
+};
+//code for processing form comments
+document.getElementById("actionForm").addEventListener('submit', function(e) {
     e.preventDefault();
-    let str = '',
-        obj = {},
-        name = document.getElementById('form__name'),
-        email = document.getElementById('form__email'),
-        text = document.getElementById('form__textarea');
+
+    let name = document.getElementById('actionForm__name'),
+        email = document.getElementById('actionForm__email'),
+    text = document.getElementById('actionForm__textarea');
+    if(name.value === "" || email.value === "" || text.value === ""){
+        alert("Заполните поля!");
+        return;
+    }
+
     if(validateEmail(email.value)) {
         if(name.value === '') {
             alert('Введите имя!');
-            return false;
+            return ;
         }
+        if(name.value === '') {
+            alert('Опишите что вам нужно сделать');
+            return ;
+        }
+        jsonTransform(name.value, email.value, text.value);
+    }
+
+});
+//code for processing form comments
+document.getElementById("reviewForm").addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById('form__name'),
+        email = document.getElementById('form__email'),
+        text = document.getElementById('form__textarea');
+
+    if(validateEmail(email.value)) {
+        if(name.value === '') {
+            alert('Введите имя!');
+            return;
+        }
+
         if(text.value !== "")
             createComment(name.value, text.value);
-        obj["name"] = name.value;
-        obj["email"] = email.value;
-        obj["text"] = text.value;
-        str = JSON.stringify(obj);
-        console.log(str);
+
+        jsonTransform(name.value, email.value, text.value);
+
         name.value = '';
         email.value = '';
         text.value = '';
     } else alert('Ваш e-mail не коректен!');
-    function validateEmail(mail) {
-        let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(String(mail).toLowerCase());
 
-    }
 });
 
+function jsonTransform(name, email, text) {
+    let str = '',
+        obj = {};
+
+    obj["name"] = name;
+    obj["email"] = email;
+    obj["text"] = text;
+
+    str = JSON.stringify(obj);
+
+    console.log(str);
+}
+function validateEmail(mail) {
+    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(mail).toLowerCase());
+}
+
+//add new comment
 function createComment(name, text) {
 
     let comment = document.getElementById("comment");
