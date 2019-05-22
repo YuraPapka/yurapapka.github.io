@@ -1,0 +1,157 @@
+html, body
+  margin: 0
+  padding: 0
+  font:
+    family: "Commorat"
+    size: 2vmin
+    weight: 300
+
+.container
+  width: 80%
+  margin: 0 10%
+a
+  text-decoration: none
+  color: #212121
+  font:
+    family: 'Cormorant'
+    size: 1em
+
+section
+  //border: 2px solid #000
+  width: 100%
+  height: 100vh
+.btn
+  z-index: 3
+  position: relative
+  padding: 1vh 2vh
+  cursor: pointer
+  text-transform: uppercase
+  font:
+    family: 'Cormorant-Medium', sans-serif
+    size: 1em
+  transition: .5s
+  &.btn__black
+    background: #212121
+    border: 1px solid #212121
+    color: #fff
+  &.btn__white
+    z-index: 2
+    color: #000
+    background: none
+    border: 1px solid #000
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      background: #212121
+      transform-origin: center
+      transform: scale(0)
+      transition: .5s
+      z-index: 1
+    &:hover
+      color: #fff
+      &::before
+        transform: scale(1)
+
+  &.btn__circle
+    display: block
+    padding: 0
+    text-align: center
+    background: none
+    //border: none
+    border-radius: 50%
+    width: 5vh
+    height: 5vh
+    line-height: 5vh
+    text-decoration: none
+    color: #fff
+    border: 1px solid #fff
+    font-size: 1.2em
+    &:hover
+      color: #0077b5
+      background: #fff
+
+.divider
+  margin: 0 auto
+  width: 7.5%
+  text-align: center
+  .divider__row
+    margin: 0
+    padding: 0
+    line-height: 8px
+    div
+      background: #000
+      display: inline-block
+      height: 2px
+      border-radius: 1px
+      &:nth-child(1), &:nth-child(3)
+        width: 37.5%
+      &:nth-child(2)
+        width: 10%
+        margin: 0 2.5%
+h2
+  text-align: center
+  text-transform: uppercase
+  font:
+    family: "Cormorant-Light"
+    size: 2.25em
+    weight: 300
+  padding: 10vh 0 2vh
+  margin-bottom: 0
+h3
+  text-align: center
+  text-transform: uppercase
+  font:
+    family: "Cormorant-Bold"
+    size: 1.5em
+
+.items
+  margin-top:
+  width: 100%
+  display: flex
+  justify-content: space-around
+  .item
+
+.btn__svg
+  display: inline-block
+  text-transform: uppercase
+  background: none
+  border: none
+  //width: auto
+  height: 40px
+  line-height: 40px
+  text-align: center
+  //margin: 10px auto
+  position: relative
+  cursor: pointer
+  transition: 0.6s
+  .btn__text
+    width: 100%
+    display: block
+    text-align: center
+    position: absolute
+    top: 0
+    left: 0
+    font:
+      family: "Commorat-Medium"
+    line-height: 40px
+  svg
+    //position: absolute
+    //top: 0
+    //left: 0
+    rect
+      stroke: #000
+      stroke-width: 1
+      transition: 0.5s
+      stroke-dasharray: 600, 0
+  &:hover
+    background: rgba(#0077b5, .1)
+    box-shadow: 0 0 20px #fff
+    svg rect
+      stroke-width: 5
+      stroke-dasharray: 50, 245
+      stroke-dashoffset: 70

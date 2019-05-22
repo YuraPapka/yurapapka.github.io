@@ -1,0 +1,75 @@
+.contact
+  .contact__divider
+    margin-bottom: 8vh
+  .contact__data
+    display: flex
+    .contact__data__item
+      margin-left: 10%
+      width: 40%
+      display: flex
+      .contact__data__icon
+        display: inline-block
+        padding: 1vh 5% 0 0
+        font-size: 1.5em
+      .contact__data__item__content__lettering
+        font:
+          family: 'Cormorant', sans-serif
+          size: 1.5em
+          weight: 500
+      .contact__data__item__content__info
+        a
+          font:
+            family: 'Cormorant', sans-serif
+  .contact__form
+    form
+      //display: flex
+      //flex-direction: column
+      //align-items: center
+
+      .input
+        width: calc(100% - 4vh)
+        font-size: 1em
+        max-width: 600px
+        margin-top: 0.5vh
+        //width: /
+        border: none
+        border-bottom: 1px dashed #000
+        //background: rgba(0,0,0,0.6)
+        //color: #dfdfdf
+        padding: 1vh 2vh
+        &.textarea
+          //width: 100%
+          display: block
+          //width: 100%
+          height: 10vh
+          resize: none
+          padding: 1vh 2vh
+          margin: 0
+          //max-height: 15vh
+        &:focus
+          //color: #dfdfdf
+          outline: none
+        &:-webkit-autofill, :-webkit-autofill:hover, :-webkit-autofill:focus, :-webkit-autofill:active
+          -webkit-box-shadow: 0 0 0 1000px rgb(255, 255, 255) inset
+          -webkit-text-fill-color: #000
+        &::placeholder
+          //color: #dfdfdf
+      .contact__form__btn
+        display: block
+        //text-align: center
+        margin: 0 auto
+      //  margin-top: 3vh
+      //  padding: 1vh 2vh
+      .contact__form__wrapper
+        margin-bottom: 5vh
+        width: 100%
+        display: flex
+        .contact__form__left
+          display: flex
+          flex-direction: column
+          justify-content: space-between
+          width: 45%
+          margin-right: 10%
+        .contact__form__right
+          display: block
+          width: 45%

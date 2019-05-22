@@ -1,0 +1,98 @@
+.about
+  position: relative
+  height: 100vh
+  //border-bottom: 1px solid #000
+  .about__title
+    padding: 12vh 0 2vh
+    margin: 0
+  .about__content
+    display: flex
+    flex-direction: column
+    align-items: center
+    .about__text
+      max-width: 60%
+      text-align: center
+    //.about__btn
+  .about__skills
+    position: relative
+    //height: 30%
+    width: 100%
+    //height: max
+    perspective: 1000px
+    .about__skills__content
+      text-align: center
+      .about__skills__content__title
+        padding-top: 5vh
+
+    .about__skills__rotate
+      height: 40vh
+      width: 100%
+      transform: rotateY(0deg)
+      transition: .5s
+      transform-origin: left center
+      //background: #999999
+      .container
+        display: flex
+        align-items: center
+        justify-content: space-between
+        //width: 100%
+        height: 33%
+        .about__skill
+          display: flex
+          flex-direction: column
+          justify-content: space-around
+          height: 100%
+          width: 30%
+          padding-right: calc(10% / 3)
+          cursor: pointer
+          text-transform: uppercase
+          font:
+            family: 'Cormorant-Regular'
+            size: 1.5em
+
+          .level
+            height: 2vh
+            width: 100%
+            background: #212121
+            &.p-90
+              background: linear-gradient(to right, #212121 90%, #dfdfdf 0%)
+            &.p-80
+              background: linear-gradient(to right, #212121 80%, #dfdfdf 0%)
+            &.p-70
+              background: linear-gradient(to right, #212121 70%, #dfdfdf 0%)
+            &.p-60
+              background: linear-gradient(to right, #212121 60%, #dfdfdf 0%)
+            &.p-50
+              background: linear-gradient(to right, #212121 50%, #dfdfdf 0%)
+            &.p-40
+              background: linear-gradient(to right, #212121 40%, #dfdfdf 0%)
+            &.p-30
+              background: linear-gradient(to right, #212121 30%, #dfdfdf 0%)
+          &:hover
+            box-shadow: 0 0 10px #000
+
+    .about__skills__info
+      position: absolute
+      bottom: 0
+      right: 0
+      height: 100%
+      width: 20%
+      //transform: rotateY(-90deg)
+      transform-origin: right
+      transition: .5s
+      .about__skill__info
+        position: absolute
+        top: 0
+        height: 100%
+        width: 100%
+        transform: rotateY(90deg)
+        transform-origin: right
+        transition: .5s
+
+        //opacity: 0
+        background: #e1e1e1
+    .about__skills__wrapper
+      position: relative
+      &:hover
+        .about__skills__rotate
+          transform: rotateY(17deg)

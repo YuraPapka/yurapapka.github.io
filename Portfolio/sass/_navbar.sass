@@ -1,0 +1,66 @@
+.nav__bar
+  z-index: 555
+  position: fixed
+  width: 100%
+  transition: .8s
+  border-bottom: 1px solid #e8e8e8
+  box-shadow: 0 0 10px #e1e1e1
+  &.nav__bar__fixed
+    position: fixed
+    width: 100%
+    top: 0
+    background: rgba(#fff, .9)
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 8vh
+  .logo
+    cursor: default
+    font:
+      family: 'Montserrat-Bold'
+      size: 1.5em
+  .menu
+    height: 100%
+    position: relative
+    width: 50%
+    .menu__runner
+      position: absolute
+      height: 5px
+      bottom: 5px
+      transition: .5s
+      width: 25%
+      //left: 200px
+      background: rgba(#0077b5,.3)
+      //border-radius: 2.5px
+      z-index: 1
+    .menu__items
+      height: 100%
+      margin: 0
+      padding: 0
+      list-style: none
+      display: flex
+      //justify-content: space-between
+      align-items: center
+      .menu__item
+        cursor: pointer
+        //flex-grow: 1
+        text-align: center
+        height: 100%
+        width: 25%
+        //display: inline-block
+        //width: 20%
+        text-transform: uppercase
+        transition: .5s
+        z-index: 2
+        &__active
+          border-bottom: 1px solid #212121
+        a
+          line-height: 8vh
+@media screen and (min-width: 761px)
+  .nav__bar
+
+
+@media screen and (max-width: 760px) and (orientation: portrait)
+  .nav__bar
+
