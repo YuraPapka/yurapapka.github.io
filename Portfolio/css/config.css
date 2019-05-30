@@ -436,13 +436,15 @@ h3 {
         font-size: 1.2em;
         background: #e1e1e1; }
         .about .about__skills .about__skills__info .about__skill__info .about__skill__info__title {
+          height: 20%;
+          line-height: 100%;
           display: block;
           margin-top: 10%;
           width: 100%;
           text-align: center;
           font-size: 1em; }
         .about .about__skills .about__skills__info .about__skill__info .about__skill__info__content {
-          margin-top: -5%;
+          margin-top: -10%;
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
