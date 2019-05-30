@@ -1,7 +1,3 @@
-# yurapapka.github.io
+## Yurii Papka
 
-##  Examples of my work
-
-[Auto](https://yurapapka.github.io/Auto/)
-
-[Axit](https://yurapapka.github.io/Axit/)
+# [See my Portfolio](https://yurapapka.github.io/Portfolio/)
