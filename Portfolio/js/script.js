@@ -1,5 +1,16 @@
-// let generalId = ["home", "about", "service", "portfolio", "contact"];
-let generalId = ["home", "about", "portfolio", "contact"];
+window.onload = () => {
+    navBarBcg(window.pageYOffset || document.documentElement.scrollTop);
+    menuRunner(menuItemActive);
+};
+window.onresize = () => {
+    menuRunner(menuItemActive);
+};
+
+let generalId = document.getElementsByTagName("section");
+generalId.map = Array.prototype.map;
+generalId = generalId.map(function(section) {
+    return section.getAttribute("id");
+});
 window.onscroll = function () {
     let scroll = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -38,20 +49,30 @@ let menuRunner = (element) => {
 let menuRunnerLeave = () => {
     if(menuItemScrolling) menuRunner(menuItemActive);
 };
-
-$('*a[href*="#"]').forEach((item) => {
-    item.parentElement.addEventListener("click", (event) => {
-        event.preventDefault();
-        // if(document.querySelector("#menu:hover")) {
+document.querySelectorAll('#menu a[href*="#"]').forEach((item) => {
+    item.parentElement.addEventListener("click", (e) => {
+        e.preventDefault();
         menuItemActive = item.parentElement;
         menuItemScrolling = false;
-            // menuItemActive = item.parentElement;
         setInterval(() => {menuItemScrolling = true}, 1000);
-        // }
-        $(item.getAttribute("href")).scrollIntoView({
-            behavior: "smooth",//"auto" | "instant"
+        document.querySelector(item.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
             block:    "start"
         });
+    });
+});
+document.getElementById("scrollToAbout").addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth",
+        block:    "start"
+    });
+});
+document.getElementById("scrollToHome").addEventListener("click", function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth",
+        block:    "start"
     });
 });
 
@@ -68,22 +89,18 @@ function $(str) {
     }
 }
 
-window.onload = () => {
-    navBarBcg(window.pageYOffset || document.documentElement.scrollTop);
-    menuRunner(menuItemActive);
-};
-
-
 //aboutInfo
 let activeElemAboutInfo;
-function aboutInfo(elemId, context) {
+function aboutInfo(elemId) {
     if(activeElemAboutInfo){
         activeElemAboutInfo.style.transform = "rotateY(-90deg)";
         activeElemAboutInfo.style.opacity = "0";
         let elem = activeElemAboutInfo;
         setTimeout(() => {
-            elem.style.transform = "rotateY(90deg)";
-            console.log(context);
+            if(document.querySelector(".about__skill:hover") === elem)
+                elem.style.transform = "rotateY(0deg)";
+            else
+                elem.style.transform = "rotateY(90deg)";
         }, 200);
     }
     if(elemId){
@@ -97,18 +114,24 @@ function aboutInfo(elemId, context) {
 }
 
 //form
-let form = document.forms.messageMe;
-form.addEventListener("submit", (e) => {
+document.messageMe.addEventListener("submit", function(e) {
     e.preventDefault();
+    let obj = {};
     // this.elements.forEach = Array.prototype.forEach;
-    console.log(this);
-    let str = "";
-    for(let i = 0; i < form.elements.length; i++) {
-        console.log(form.elements[i].value);
-        str += form.elements[i].value;
+    // console.log(this);
+    for(let i = 0; i < this.elements.length; i++) {
+        let el = this.elements[i];
+        if(el.type === "submit") continue;
+        obj[el.name] = el.value;
+        el.value = "";
     }
-    // this.elements.forEach((elem) => {
-    //     return elem.value;
-    // })
+    let str = JSON.stringify(obj);
     console.log(str);
+    alert('Извините, возникли неполадки на сервере!\n Напишите мне на почту или любую соцсеть');
+});
+
+document.getElementById("portfolioLoadMore").addEventListener("click", function (e){
+    e.preventDefault();
+    this.previousElementSibling.style.display = "block";
+    this.style.display = "none";
 });

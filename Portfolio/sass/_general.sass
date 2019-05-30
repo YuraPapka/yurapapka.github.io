@@ -17,9 +17,10 @@ a
     size: 1em
 
 section
-  //border: 2px solid #000
   width: 100%
   height: 100vh
+  overflow: hidden
+
 .btn
   z-index: 3
   position: relative
@@ -30,40 +31,11 @@ section
     family: 'Cormorant-Medium', sans-serif
     size: 1em
   transition: .5s
-  &.btn__black
-    background: #212121
-    border: 1px solid #212121
-    color: #fff
-  &.btn__white
-    z-index: 2
-    color: #000
-    background: none
-    border: 1px solid #000
-    position: relative
-    &::before
-      content: ''
-      position: absolute
-      top: 0
-      bottom: 0
-      left: 0
-      right: 0
-      background: #212121
-      transform-origin: center
-      transform: scale(0)
-      transition: .5s
-      z-index: 1
-    &:hover
-      color: #fff
-      &::before
-        transform: scale(1)
-
   &.btn__circle
     display: block
     padding: 0
     text-align: center
     background: none
-    //border: none
-    border-radius: 50%
     width: 5vh
     height: 5vh
     line-height: 5vh
@@ -71,9 +43,12 @@ section
     color: #fff
     border: 1px solid #fff
     font-size: 1.2em
+    border-radius: 50%
     &:hover
-      color: #0077b5
+      color: $blue
       background: #fff
+
+
 
 .divider
   margin: 0 auto
@@ -93,6 +68,7 @@ section
       &:nth-child(2)
         width: 10%
         margin: 0 2.5%
+
 h2
   text-align: center
   text-transform: uppercase
@@ -102,6 +78,7 @@ h2
     weight: 300
   padding: 10vh 0 2vh
   margin-bottom: 0
+
 h3
   text-align: center
   text-transform: uppercase
@@ -114,13 +91,15 @@ h3
   width: 100%
   display: flex
   justify-content: space-around
-  .item
 
 .btn__svg
+  padding: 0
+  margin: 0
   display: inline-block
   text-transform: uppercase
   background: none
   border: none
+  text-decoration: none
   //width: auto
   height: 40px
   line-height: 40px
@@ -129,6 +108,10 @@ h3
   position: relative
   cursor: pointer
   transition: 0.6s
+  outline: 0
+  font-size: 1em
+  &:focus
+    outline: 0
   .btn__text
     width: 100%
     display: block
@@ -138,11 +121,9 @@ h3
     left: 0
     font:
       family: "Commorat-Medium"
+      size: 1em
     line-height: 40px
   svg
-    //position: absolute
-    //top: 0
-    //left: 0
     rect
       stroke: #000
       stroke-width: 1
@@ -155,3 +136,13 @@ h3
       stroke-width: 5
       stroke-dasharray: 50, 245
       stroke-dashoffset: 70
+@media screen and (max-width: 760px)
+  .btn__svg
+    border: 1px solid #000
+    width: 70px
+    height: 30px
+    line-height: 30px
+    .btn__text
+      line-height: 30px
+    svg
+      display: none

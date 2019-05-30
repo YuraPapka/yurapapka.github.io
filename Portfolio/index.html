@@ -21,11 +21,23 @@
                     <span></span>
                 </div>
                 <ul class="menu__items" onmouseleave="menuRunnerLeave()">
-                    <li class="menu__item" onmouseenter="menuRunner(this);"><a href="#home">Главная</a></li>
-                    <li class="menu__item" onmouseenter="menuRunner(this);"><a href="#about">Про меня</a></li>
+                    <li class="menu__item" onmouseenter="menuRunner(this);">
+                        <i class="fas fa-home menu__item__icon"></i>
+                        <a href="#home">Главная</a>
+                    </li>
+                    <li class="menu__item" onmouseenter="menuRunner(this);">
+                        <i class="fas fa-address-card menu__item__icon"></i>
+                        <a href="#about">Про меня</a>
+                    </li>
                     <!--<li class="menu__item" onmouseenter="menuRunner(this);"><a href="#service">Сервисы</a></li>-->
-                    <li class="menu__item" onmouseenter="menuRunner(this);"><a href="#portfolio">Портфолио</a></li>
-                    <li class="menu__item" onmouseenter="menuRunner(this);"><a href="#contact">Контакты</a></li>
+                    <li class="menu__item" onmouseenter="menuRunner(this);">
+                        <i class="fas fa-briefcase menu__item__icon"></i>
+                        <a href="#portfolio">Портфолио</a>
+                    </li>
+                    <li class="menu__item" onmouseenter="menuRunner(this);">
+                        <i class="fas fa-address-book menu__item__icon"></i>
+                        <a href="#contact">Контакты</a>
+                    </li>
                 </ul>
                 <div class="menu__runner" id="runner"></div>
             </nav>
@@ -35,8 +47,8 @@
             <div class="header__content">
                 <h1>Юрий Папка</h1>
                 <p>Junior Front-end Developer</p>
-                <a href="#about" class="btn__svg">
-                    <span class="btn__text">More</span>
+                <a href="#about" class="btn__svg" id="scrollToAbout">
+                    <span class="btn__text">Больше</span>
                     <svg width="140" height="40" viewBox="0 0 140 40" xmlns="http://www.w3.org/2000/svg">
                         <rect x='0' y='0' fill='none' width='140' height='40'/>
                     </svg>
@@ -99,57 +111,132 @@
                     <div class="container">
                         <div class="about__skill" onmouseenter="aboutInfo('#aboutSkillsInfo1');">
                             html/css
-                            <div class="level p-70"></div>
+                            <div class="level p-90"></div>
                         </div>
                         <div class="about__skill" onmouseenter="aboutInfo('#aboutSkillsInfo2');">
                             Sass
-                            <div class="level p-60"></div>
+                            <div class="level p-70"></div>
 
                         </div>
                         <div class="about__skill" onmouseenter="aboutInfo('#aboutSkillsInfo3');">
-                            JavaScript
+                            Photoshop
                             <div class="level p-40"></div>
                         </div>
                     </div>
                     <div class="container">
                         <div class="about__skill" onmouseenter="aboutInfo('#aboutSkillsInfo4');">
-                            jQuery
-                            <div class="level p-60"></div>
+                            Angular
+                            <div class="level p-20"></div>
                         </div>
                         <div class="about__skill" onmouseenter="aboutInfo('#aboutSkillsInfo5');">
-                            Gulp
-                            <div class="level p-60"></div>
+                            JavaScript
+                            <div class="level p-80"></div>
                         </div>
                         <div class="about__skill" onmouseenter="aboutInfo('#aboutSkillsInfo6');">
-                            GitHub
-                            <div class="level p-60"></div>
+                            jQuery
+                            <div class="level p-50"></div>
                         </div>
                     </div>
                     <div class="container">
                         <div class="about__skill" onmouseenter="aboutInfo('#aboutSkillsInfo7');">
-                            jQuery
-                            <div class="level p-60"></div>
+                            Gulp
+                            <div class="level p-50"></div>
                         </div>
                         <div class="about__skill" onmouseenter="aboutInfo('#aboutSkillsInfo8');">
-                            Gulp
+                            Git
                             <div class="level p-60"></div>
                         </div>
                         <div class="about__skill" onmouseenter="aboutInfo('#aboutSkillsInfo9');">
-                            GitHub
+                            ООП
                             <div class="level p-60"></div>
                         </div>
                     </div>
                 </div>
                 <div class="about__skills__info">
-                    <div class="about__skill__info" id="aboutSkillsInfo1">html</div>
-                    <div class="about__skill__info" id="aboutSkillsInfo2">sass</div>
-                    <div class="about__skill__info" id="aboutSkillsInfo3">js</div>
-                    <div class="about__skill__info" id="aboutSkillsInfo4">jquery</div>
-                    <div class="about__skill__info" id="aboutSkillsInfo5">gulp</div>
-                    <div class="about__skill__info" id="aboutSkillsInfo6">Xd</div>
-                    <div class="about__skill__info" id="aboutSkillsInfo7">++jquery</div>
-                    <div class="about__skill__info" id="aboutSkillsInfo8">+ +gulp</div>
-                    <div class="about__skill__info" id="aboutSkillsInfo9">++Xd</div>
+                    <div class="about__skill__info" id="aboutSkillsInfo1">
+                        <div class="about__skill__info__title">HTML/CSS</div>
+                        <ul class="about__skill__info__content">
+                            <li>Адаптивность</li>
+                            <li>Кроссбраузерность</li>
+                            <li>Валидность</li>
+                            <li>Flex/Grid-box</li>
+                            <li>SVG</li>
+                            <li>Блочная вёрстка</li>
+                        </ul>
+                    </div>
+                    <div class="about__skill__info" id="aboutSkillsInfo2">
+                        <div class="about__skill__info__title">SASS</div>
+                        <ul class="about__skill__info__content">
+                            <li>Переменные</li>
+                            <li>Вложенности</li>
+                            <li>Импорт</li>
+                            <li>Фрагментирование</li>
+                            <li>Миксины</li>
+                            <li>Наследование</li>
+                        </ul>
+                    </div>
+                    <div class="about__skill__info" id="aboutSkillsInfo3">
+                        <div class="about__skill__info__title">Photoshop</div>
+                        <ul class="about__skill__info__content">
+                            <li>Нарезка</li>
+                            <li>Цвет</li>
+                            <li>Шрифт</li>
+                            <li>Изображение</li>
+                        </ul>
+                    </div>
+                    <div class="about__skill__info" id="aboutSkillsInfo4">
+                        <div class="about__skill__info__title">Angular</div>
+                        <ul class="about__skill__info__content">
+                            Только начинаю изучать
+                        </ul>
+                    </div>
+                    <div class="about__skill__info" id="aboutSkillsInfo5">
+                        <div class="about__skill__info__title">JavaScript</div>
+                        <ul class="about__skill__info__content">
+                            <li>Структуры данных</li>
+                            <li>DOM</li>
+                            <li>BOM</li>
+                            <li>Собития</li>
+                            <li>Конструкторы</li>
+                            <li>Замыкания, область видимости</li>
+                        </ul>
+                    </div>
+                    <div class="about__skill__info" id="aboutSkillsInfo6">
+                        <div class="about__skill__info__title">JQuery</div>
+                        <ul class="about__skill__info__content">
+                            <li>Внутренние функции</li>
+                            <li>Собития</li>
+                            <li>Ajax</li>
+                        </ul>
+                    </div>
+                    <div class="about__skill__info" id="aboutSkillsInfo7">
+                        <div class="about__skill__info__title">GULP</div>
+                        <ul class="about__skill__info__content">
+                            <li>Потоки</li>
+                            <li>BrowserSync</li>
+                            <li>Auto Prefixer</li>
+                            <li>Watch</li>
+                        </ul>
+                    </div>
+                    <div class="about__skill__info" id="aboutSkillsInfo8">
+                        <div class="about__skill__info__title">GIT</div>
+                        <ul class="about__skill__info__content">
+                            <li>Ветки</li>
+                            <li>Gitflow</li>
+                            <li>CMD</li>
+                        </ul>
+                    </div>
+                    <div class="about__skill__info" id="aboutSkillsInfo9">
+                        <div class="about__skill__info__title">ООП</div>
+                        <ul class="about__skill__info__content">
+                            <li>Функцинальный стиль</li>
+                            <li>Прототипный стиль</li>
+                            <li>Наследование</li>
+                            <li>Абстрагирование</li>
+                            <li>Инкапсуляция</li>
+                            <li>Полиморфизм</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <!--<div class="about__skills__info"></div>-->
@@ -221,20 +308,42 @@
                 </div>
             </div>
             <div class="portfolio__examples">
-                <div class="portfolio__example"><img src="img/portfolio.jpg" alt="1"></div>
-                <div class="portfolio__example"><img src="img/portfolio2.jpg" alt="2"></div>
-                <!--<div class="portfolio__example"><img src="img/portfolio3.jpg" alt="3"></div>-->
+
+                <div class="portfolio__example">
+                    <a href="https://yurapapka.github.io/Auto/" target="_blank">
+                        <img src="img/Auto.png" alt="1">
+                        <div class="portfolio__example__hover">
+                            <div class="portfolio__example__hover__rectangle"></div>
+                            <div class="portfolio__example__hover__content">
+                                <div class="portfolio__example__hover__content__title">VegasAuto</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="portfolio__example">
+                    <a href="https://yurapapka.github.io/Axit/" target="_blank">
+                        <img src="img/Axit.png" alt="1">
+                        <div class="portfolio__example__hover">
+                            <div class="portfolio__example__hover__rectangle"></div>
+                            <div class="portfolio__example__hover__content">
+                                <div class="portfolio__example__hover__content__title">Axit</div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
             </div>
             <div class="portfolio__load__more">
-                <button class="btn__svg portfolio__load__more__btn">
-                <span class="btn__text">
-                    <i class="fas fa-eye"></i>
-                    Больше
-                </span>
-                <svg width="140" height="40" viewBox="0 0 140 40" xmlns="http://www.w3.org/2000/svg">
-                    <rect x='0' y='0' fill='none' width='140' height='40'/>
-                </svg>
-            </button>
+                <div class="portfolio__load__more__text">Это все доступные работы у меня на данный момент</div>
+                <button class="btn__svg portfolio__load__more__btn" id="portfolioLoadMore">
+                    <span class="btn__text">
+                        <i class="fas fa-eye"></i>
+                        Больше
+                    </span>
+                    <svg width="140" height="40" viewBox="0 0 140 40" xmlns="http://www.w3.org/2000/svg">
+                        <rect x='0' y='0' fill='none' width='140' height='40'/>
+                    </svg>
+                </button>
             </div>
         </div>
     </section>
@@ -262,7 +371,7 @@
                             <a href="tel:+380689682040">+38 (068) 968 20 40</a>
                         </div>
                         <div class="contact__data__item__content__info">
-                            <a href="tel:+380689682040">+38 (093) 528 44 16</a>
+                            <a href="tel:+380935284416">+38 (093) 528 44 16</a>
                         </div>
                     </div>
                 </div>
@@ -279,7 +388,7 @@
                 </div>
             </div>
             <div class="contact__content">
-                <h2 class="contact__title">Напишите мне</h2>
+                <h2 class="contact__title contact__title__two">Напишите мне</h2>
                 <div class="divider contact__divider">
                     <div class="divider__row">
                         <div></div><div></div><div></div>
@@ -291,7 +400,7 @@
             </div>
             <div class="contact__form">
 
-                <form name="messageMe" action="#" onsubmit="SendMail(this.email.value, this.user.value, this.message.value); return false">
+                <form name="messageMe" action="#">
                     <div class="contact__form__wrapper">
                         <div class="contact__form__left">
                             <input class="input" name="user" type="text" placeholder="Ваше имя?">
@@ -309,7 +418,7 @@
                         <!--Отправить-->
                         <!--<i class="fas fa-paper-plane"></i>-->
                     <!--</button>-->
-                    <button name="messageMe" type="submit" class="btn__svg contact__form__btn">
+                    <button name="messageMe" type="Submit" class="btn__svg contact__form__btn">
                         <span class="btn__text">
                             Отправить
                             <i class="fas fa-paper-plane"></i></span>
@@ -326,15 +435,17 @@
         <div class="container">
             <div class="footer__network">
                 <a href="https://www.linkedin.com/in/yurii-papka-576157182/" target="_blank" class="btn btn__circle"><i class="fab fa-linkedin-in"></i></a>
-                <a href="tg://resolve?domain=enteogen" class="btn btn__circle"><i class="fab fa-telegram-plane"></i></a>
+                <a href="tg://resolve?domain=edge_space" class="btn btn__circle"><i class="fab fa-telegram-plane"></i></a>
                 <a href="viber://chat?number=+120345678910" class="btn btn__circle"><i class="fab fa-viber"></i></a>
+                <a href="skype:papka.yurii" class="btn btn__circle"><i class="fab fa-skype"></i></a>
             </div>
             <div class="footer__text">
                 Yurii Papka
             </div>
             <div class="footer__top">
+
                 <a href="file/Yurii_Papka_CV.pdf" class="btn btn__circle"><i class="fas fa-file-download"></i></a>
-                <a href="#home" class="btn btn__circle"><i class="fas fa-arrow-up"></i></a>
+                <a href="#home" class="btn btn__circle" id="scrollToHome"><i class="fas fa-arrow-up"></i></a>
             </div>
         </div>
     </footer>

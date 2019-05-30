@@ -57,10 +57,24 @@
           border-bottom: 1px solid #212121
         a
           line-height: 8vh
+        .menu__item__icon
+          line-height: 8vh
+          font-size: 1.5em
 @media screen and (min-width: 761px)
   .nav__bar
+    .menu
+      .menu__item
+        .menu__item__icon
+          display: none
 
-
-@media screen and (max-width: 760px) and (orientation: portrait)
+//@media screen and (max-width: 760px) and (orientation: portrait)
+@media screen and (max-width: 760px)
   .nav__bar
+    .menu
+      .menu__runner
+        height: 2px
+      .menu__item
+        a
+          display: none
+
 
