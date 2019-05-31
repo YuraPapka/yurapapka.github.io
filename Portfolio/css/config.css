@@ -326,7 +326,8 @@ h3 {
     align-items: center; }
     .about .about__content .about__text {
       max-width: 60%;
-      text-align: center; }
+      text-align: center;
+      font-size: 1.2em; }
   .about .about__skills {
     position: relative;
     width: 100%;
@@ -408,10 +409,10 @@ h3 {
               background: linear-gradient(to right, #212121 20%, #dfdfdf 0%); }
           .about .about__skills .about__skills__rotate .container .about__skill:hover {
             z-index: 99;
-            -webkit-transform: translate(2px, 1px);
-            transform: translate(2px, 1px);
-            -webkit-box-shadow: 1px 1px 4px #666666;
-            box-shadow: 1px 1px 4px #666666; }
+            -webkit-transform: translate(-3px, -2px);
+            transform: translate(-3px, -2px);
+            -webkit-box-shadow: 2px 2px 4px #666666;
+            box-shadow: 2px 2px 4px #666666; }
     .about .about__skills .about__skills__info {
       position: absolute;
       bottom: 0;
@@ -459,6 +460,7 @@ h3 {
           .about .about__skills .about__skills__info .about__skill__info .about__skill__info__content li {
             margin-top: 1vh; }
     .about .about__skills .about__skills__wrapper {
+      margin-top: 5vh;
       position: relative; }
       .about .about__skills .about__skills__wrapper:hover .about__skills__rotate {
         -webkit-transform: rotateY(17deg);

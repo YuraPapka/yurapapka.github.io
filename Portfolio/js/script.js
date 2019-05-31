@@ -117,17 +117,27 @@ function aboutInfo(elemId) {
 document.messageMe.addEventListener("submit", function(e) {
     e.preventDefault();
     let obj = {};
-    // this.elements.forEach = Array.prototype.forEach;
-    // console.log(this);
     for(let i = 0; i < this.elements.length; i++) {
         let el = this.elements[i];
         if(el.type === "submit") continue;
         obj[el.name] = el.value;
+    }
+
+    let str = JSON.stringify(obj);
+
+    let src = "https://api.telegram.org/bot886699692:AAHRMpHYUNoCmDTfLQsWXJZJXSJUa2igHtY/sendMessage?chat_id=357488514&text=" + str;
+
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', src, true);
+    xhr.onerror = function() {
+        alert('Извините, возникли неполадки на сервере!\n Напишите мне на почту или любую соцсеть');
+    };
+    xhr.send();
+    for(let i = 0; i < this.elements.length; i++) {
+        let el = this.elements[i];
+        if(el.type === "submit") continue;
         el.value = "";
     }
-    let str = JSON.stringify(obj);
-    console.log(str);
-    alert('Извините, возникли неполадки на сервере!\n Напишите мне на почту или любую соцсеть');
 });
 
 document.getElementById("portfolioLoadMore").addEventListener("click", function (e){
