@@ -1,0 +1,99 @@
+@mixin max-width($width)
+  @media screen and (max-width: #{$width})
+    @content
+
+//
+//@mixin for-phone-only
+//  @media (max-width: 599px)
+//    @content
+//@mixin for-tablet-portrait-up
+//  @media (min-width: 600px)
+//    @content
+//@mixin for-tablet-landscape-up
+//  @media (min-width: 900px)
+//    @content
+//
+//@mixin for-desktop-up
+//  @media (min-width: 1200px)
+//    @content
+//
+//@mixin for-big-desktop-up
+//  @media (min-width: 1800px)
+//    @content
+
+
+
+@mixin mobile
+  // mobile version style
+  @media screen and (max-width: $desktopPointMobile)
+    @content
+@mixin desktop
+  //desktop style
+  @media screen and (min-width: $desktopPointMobile + 1)
+    @content
+// usage
+//.my-box
+  padding: 10px
+
+  @include for-desktop-up
+    padding: 20px
+//grid
+section, header, footer, .container
+  padding: 0 15px
+.left-correction
+  left: -15px
+
+@media (min-width: 575.98px)
+  section, header, footer, .container
+    padding: 0 calc(50vw - 270px)
+  .left-correction
+    left: calc(270px - 50vw)
+
+
+@media (min-width: 767.98px)
+  section, header, footer, .container
+    padding: 0 calc(50vw - 360px)
+  .left-correction
+    left: calc(360px - 50vw)
+
+@media (min-width: 991.98px)
+  section, header, footer, .container
+    padding: 0 calc(50vw - 480px)
+
+  .left-correction
+    left: calc(480px - 50vw)
+
+@media (min-width: 1199.98px)
+  section, header, footer, .container
+    padding: 0 calc(50vw - 590px)
+  .left-correction
+    left: calc(590px - 50vw)
+
+
+@mixin phone
+  @media (min-width: 575.98px)
+    @content
+@mixin max-phone
+  @media (max-width: 575.97px)
+    @content
+
+@mixin big-phone
+  @media (min-width: 767.98px)
+    @content
+@mixin max-big-phone
+  @media (max-width: 767.97px)
+    @content
+
+@mixin tablet
+  @media (min-width: 991.98px)
+    @content
+@mixin max-tablet
+  @media (max-width: 991.97px)
+    @content
+
+@mixin pc
+  @media (min-width: 1199.98px)
+    @content
+@mixin max-pc
+  @media (max-width: 1199.97px)
+    @content

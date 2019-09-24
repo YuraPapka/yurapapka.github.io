@@ -1,0 +1,60 @@
+.map
+  height: 400px
+  padding: 0
+  position: relative
+  #map
+    width: 100%
+    height: 100%
+  .contact
+    padding: 60px 40px
+    color: #292929
+    background: #fff
+    position: absolute
+    left: 60%
+    top: 50%
+    transform: translateY(-50%)
+    max-width: 40%
+    max-height: 80%
+    //z-index: 2
+    h3
+      font:
+        family: GothamPro-Bold
+        size: 20px
+      margin-top: 0
+    p
+      color: #292929
+      font:
+        size: 14px
+      .phone
+        font:
+          family: GothamPro-Medium
+      .address
+        display: inline-block
+        max-width: 220px
+    a
+      display: block
+      color: #292929
+      font:
+        size: 14px
+      margin: 8px 0
+@include max-tablet
+  .map .contact
+    left: 50%
+
+@include max-big-phone
+  .map
+    height: 800px
+    .contact
+      left: 50%
+      transform: translateX(-50%)
+      top: 50%
+      max-height: 50%
+      max-width: 90%
+@include max-phone
+  .map
+    .contact
+      width: 90%
+      text-align: center
+      padding: 60px 0
+
+

@@ -1,0 +1,47 @@
+.footer
+  background: #292929
+  padding-top: 35px
+  padding-bottom: 20px
+  .logo
+    flex-wrap: wrap
+    &__text
+      .text
+        color: #fff
+    .no-logo
+      color: #fff
+      width: 100%
+      padding-top: 30px
+      font:
+        family: 'GothamPro'
+        size: 12px
+  .subtext
+    color: #fff
+  .connection
+    display: block
+    &__info
+      a
+        color: #fff
+      padding-bottom: 20px
+    &__btn
+      .btn
+        color: #fff
+@include max-big-phone
+  .footer
+    flex-direction: column
+    align-items: center
+    .logo
+      justify-content: center
+      .logo_cont
+        display: flex
+        justify-content: center
+      .no-logo
+        padding-top: 20px
+        text-align: center
+    .connection
+      .connection__info
+        padding: 0
+        .tel
+          text-align: center
+          padding: 16px 0
+          .subtext
+            padding-top: 8px

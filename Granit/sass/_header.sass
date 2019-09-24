@@ -1,0 +1,250 @@
+.header, .footer
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+  padding-bottom: 35px
+  background: #fff
+  .logo
+    display: flex
+    align-items: center
+    &__img
+
+    &__text
+      //display: flex
+      padding-left: 15px
+      .text
+        display: block
+        text-transform: uppercase
+        font:
+          family: 'GothamPro-Bold'
+          size: 20px
+        color: #292929
+
+  .subtext
+    display: block
+    font:
+      family: 'GothamPro-Light'
+      size: 11px
+    color: #969696
+  .connection
+    display: flex
+    align-items: center
+    &__info
+      text-align: right
+      padding-right: 15px
+      a
+        color: #292929
+        font:
+          family: 'GothamPro-Bold'
+          size: 18px
+    &__btn
+      .btn
+        padding: 0 20px
+        line-height: 40px
+.header
+  .g-wrap
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background: #ffffff
+    position: relative
+    z-index: 999
+    //padding-bottom: 55px
+    padding-top: 20px
+    padding-bottom: 20px
+
+  .nav-bar-wrap
+    width: 100%
+    //margin-top: 20px
+    flex-basis: 100%
+    height: 0
+    position: relative
+    .nav-bar
+      width: 100%
+      height: auto
+      position: absolute
+      top: 0
+      z-index: 9999
+      box-sizing: content-box
+      background: #ffcc00
+      &.fixed
+        position: fixed
+        left: 50%
+        transform: translateX(-50%)
+      .logo,.mob-btn
+        display: none
+      .g-wrap
+        background: #ffcc00
+        padding: 10px 0
+        display: none
+
+      .menu
+        margin: 0
+        padding: 0
+        list-style: none
+        display: flex
+        justify-content: space-around
+        width: 100%
+        background: #ffcc00
+
+        li
+          flex-basis: calc(100% / 6)
+          a
+            display: block
+            position: relative
+            text-decoration: none
+            padding: 25px 0 20px
+            text-align: center
+            width: 100%
+            color: #000000
+            font:
+              size: 14px
+            overflow: hidden
+            //&.active
+              //color: #fff
+            $animFunc: cubic-bezier(0,.8,.43,1.44)
+            &:before
+              content: attr(data-alt)
+              opacity: 0
+              position: absolute
+              padding: 13px 0 8px
+              margin: 10px 0
+              top: 0
+              left: 0
+              right: 0
+              color: #fff
+              transition: opacity 0.2s, transform 0.3s $animFunc
+              transform: scale(1.4)
+              border-top: 2px solid #fff
+              border-bottom: 2px solid #fff
+            &:hover, &.active
+              &:before
+                opacity: 1
+                transform: scale(1)
+            //&.active:before
+              padding: 13px 0 10px
+              margin: 10px 0 8px
+@include max-big-phone
+  .header
+    padding-bottom: 35px
+    .g-wrap
+      justify-content: space-between
+    .connection
+      flex-direction: column
+      .connection__btn
+        margin-top: 8px
+    .nav-bar-wrap
+      position: relative
+      z-index: 9
+      .nav-bar
+        display: flex
+        justify-content: space-between
+        align-items: center
+        background: #ffcc00
+        .logo
+          .subtext
+            color: #292929
+        .g-wrap
+          display: flex
+        nav
+          width: 100%
+          position: absolute
+          bottom: 0
+          transition: 0.3s ease-in-out all
+          transform: translateY(0)
+          .menu
+            background: #fff
+            flex-direction: column
+            li
+              width: 100%
+              flex-basis: 100%
+              a
+                //margin: 0
+                padding: 15px 0 10px
+                &:before
+                  //transform: scale(1)
+                  color: #969696
+                  border-color: #969696
+                  margin: 0
+
+          &.activeMenu
+            //display: block
+            //transform: translateY(100%)
+            transform: translateY(100%)
+
+            //z-index: 0
+            .menu
+              //z-index: -9999
+              opacity: 1
+
+
+        .logo
+          display: flex
+          padding: 5px 0
+          margin-left: 15px
+        .mob-btn
+          width: 34px
+          height: 34px
+          margin: 0
+          margin-right: 15px
+          padding: 0
+          display: flex
+          align-items: flex-end
+          transition: 0.3s
+          border: none
+          background: none
+          box-sizing: content-box
+          outline: none
+          span, span:after, span:before
+            display: block
+            height: 5px
+            background: #EEFAFF
+            border-radius: 2.5px
+          span
+            display: block
+            width: 26px
+            margin: 0
+            line-height: 34px
+            margin-left: 8px
+            transition: 0.3s ease-in-out all
+
+            &:after, &:before
+              content: ''
+              transition: 0.3s ease-in-out all
+              transform-origin: center
+
+            &:after
+              width: 19px
+              margin-left: 7px
+              transform: translateY(8px)
+            &:before
+              width: 34px
+              margin-left: -8px
+              transform: translateY(-13px)
+          &.activeMenu
+            //transform: rotate(90deg)
+            span
+              width: 0
+              margin-left: 0
+              &:before
+                //transform: rotate(45deg) translateY(3px)
+                margin-left: 0
+                transform: rotate(45deg) translateY(0)
+              &:after
+                width: 34px
+                //transform: rotate(-45deg) translateY(-3.5px)
+                transform: rotate(-45deg) translateY(-8.5px)
+
+
+@include max-phone
+  .header
+    flex-direction: column
+    .g-wrap
+      justify-content: center
+    .logo
+      display: none
+    .connection
+
+      margin-top: 15px

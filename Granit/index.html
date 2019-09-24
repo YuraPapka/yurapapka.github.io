@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Granit</title>
+    <link rel="stylesheet" href="./style/normalize.css">
+    <link rel="stylesheet" href="./style/font.css">
+    <link rel="stylesheet" href="font/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./style/config.css">
+</head>
+<body>
+
+<header class="header" id="header">
+    <div class="g-wrap">
+        <div class="logo">
+            <div class="logo__img">
+                <img src="./img/logo.png" alt="Logo">
+            </div>
+            <div class="logo__text">
+                <div class="text">
+                    granit
+                </div>
+                <div class="subtext">
+                    Доставка нерудных материалов
+                </div>
+            </div>
+        </div>
+        <div class="connection">
+            <div class="connection__info">
+                <div class="tel">
+                    <a href="tel:88003421333">8 800 342-13-33</a>
+                    <div class="subtext">
+                        Бесплатный звонок по России
+                    </div>
+                </div>
+            </div>
+            <div class="connection__btn">
+                <button class="btn btn-black openModal">Обратный звонок</button>
+            </div>
+        </div>
+    </div>
+    <div class="nav-bar-wrap">
+        <div class="nav-bar">
+            <div class="g-wrap">
+                <div class="logo">
+                    <div class="logo__img">
+                        <img src="./img/logo.png" alt="Logo">
+                    </div>
+                    <div class="logo__text">
+                        <div class="text">
+                            granit
+                        </div>
+                        <div class="subtext">
+                            Доставка нерудных материалов
+                        </div>
+                    </div>
+                </div>
+                <button class="mob-btn" id="mobButton">
+                    <span></span>
+                </button>
+            </div>
+            <nav id="menu">
+                <ul class="menu">
+                    <li><a class="active" href="#slider" data-alt="Главная">Главная</a></li>
+                    <li><a href="#catalog" data-alt="Каталог">Каталог</a></li>
+                    <li><a href="#advantages" data-alt="Почуму МЫ">Почуму МЫ</a></li>
+                    <li><a href="#popular" data-alt="Популярные">Популярные</a></li>
+                    <li><a href="#services" data-alt="Услуги">Услуги</a></li>
+                    <li><a href="#contact" data-alt="Контакты">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<section class="slider" id="slider">
+    <h1>
+        Быстрая доставка
+    </h1>
+    <p>
+        Бетона, щебня, песка и других нерудных материалов по Москве и Московской области
+    </p>
+    <div class="btn__row">
+        <button class="btn btn-yellow slider-button">Подробнее о доставке</button>
+        <span>или</span>
+        <a href="#">перейти в каталог</a>
+    </div>
+</section>
+
+<section class="content product" id="catalog">
+    <h2 class="title">
+        Всегда в наличии
+    </h2>
+    <div class="items">
+        <div class="item">
+            <div class="card">
+                <div class="img">
+                    <img src="./img/product/sand.png" alt="Песок">
+                </div>
+                <div class="title">
+                    Песок речной
+                </div>
+                <div class="subtitle">
+                    Мелкий речной песок повышает прочность, долговечность и морозоустойчивость растворов, в состав
+                    которых он входит.
+                </div>
+                <div class="price">
+                    от 330 /т
+                </div>
+                <button class="btn btn-yellow card-btn">
+                    Подробнее
+                </button>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <div class="img">
+                    <img src="./img/product/stone.png" alt="Щебень">
+                </div>
+                <div class="title">
+                    Щебень
+                </div>
+                <div class="subtitle">
+                    Мелкий речной песок повышает прочность, долговечность и морозоустойчивость растворов, в состав
+                    которых он входит.
+                </div>
+                <div class="price">
+                    от 330 /т
+                </div>
+                <button class="btn btn-yellow card-btn">
+                    Подробнее
+                </button>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <div class="img">
+                    <img src="./img/product/priming.png" alt="Грунт">
+                </div>
+                <div class="title">
+                    Грунт
+                </div>
+                <div class="subtitle">
+                    Мелкий речной песок повышает прочность, долговечность и морозоустойчивость растворов, в состав
+                    которых он входит.
+                </div>
+                <div class="price">
+                    от 330 /т
+                </div>
+                <button class="btn btn-yellow card-btn">
+                    Подробнее
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content grey" id="advantages">
+    <h2 class="title">
+        Наши преимущества
+    </h2>
+    <div class="items">
+        <div class="item">
+            <div class="card">
+                <div class="img">
+                    <img src="./img/advantages/piggy-bank.png" alt="Низкая цена">
+                </div>
+                <div class="title">
+                    Низкая цена
+                </div>
+                <div class="subtitle">
+                    Мы сотрудничаем напрямую
+                    с производителем, поэтому можем гарантировать самую низкую цену.
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <div class="img">
+                    <img src="./img/advantages/van.png" alt="Быстрая доставка">
+                </div>
+                <div class="title">
+                    Быстрая доставка
+                </div>
+                <div class="subtitle">
+                    Весь товар уже находится на нашем складе. Нам остается только погрузить его и в путь!
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <div class="img">
+                    <img src="./img/advantages/piggy-bank.png" alt="Индивидуальный подход">
+                </div>
+                <div class="title">
+                    Индивидуальный подход
+                </div>
+                <div class="subtitle">
+                    Вам нужны бесперебойные поставки
+                    или большая партия товара со скидкой?
+                    Мы найдем решение!
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content popular-product" id="popular">
+    <h2 class="title">
+        Популярные товары
+    </h2>
+    <div class="items">
+        <div class="item">
+            <div class="card">
+
+                <div class="img">
+                    <img src="./img/popular/granit-1.png" alt="">
+                    <div class="action">
+                        Акция
+                    </div>
+                </div>
+                <div class="title">
+                    Гранитный щебень 0-5 мм
+                    (отсев)
+                </div>
+                <div class="price action">
+                    <span>
+                        1 500 /т
+                    </span>
+                    1 350 /т
+                </div>
+                <button class="btn btn-yellow card-btn">
+                    Подробнее
+                </button>
+            </div>
+
+        </div>
+        <div class="item">
+            <div class="card">
+
+                <div class="img">
+                    <img src="./img/popular/granit-2.png" alt="">
+                    <div class="action">
+                        Акция
+                    </div>
+                </div>
+                <div class="title">
+                    Гранитный щебень 0-5 мм
+                    (отсев)
+                </div>
+                <div class="price action">
+                    <span>
+                        1 500 /т
+                    </span>
+                    1 350 /т
+                </div>
+                <button class="btn btn-yellow card-btn">
+                    Подробнее
+                </button>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <div class="img">
+                    <img src="./img/popular/granit-3.png" alt="Гранит">
+                </div>
+                <div class="title">
+                    Гранитный щебень 0-5 мм
+                    (отсев)
+                </div>
+                <div class="price">
+                    1 350 /т
+                </div>
+                <button class="btn btn-yellow card-btn">
+                    Подробнее
+                </button>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <div class="img">
+                    <img src="./img/popular/granit-1.png" alt="Гранитный">
+                </div>
+                <div class="title">
+                    Гранитный щебень 0-5 мм
+                    (отсев)
+                </div>
+                <div class="price">
+                    1 350 /т
+                </div>
+                <button class="btn btn-yellow card-btn">
+                    Подробнее
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content grey services" id="services">
+    <h2 class="title">
+        Наши услуги
+    </h2>
+    <div class="items">
+        <div class="item">
+            <div class="card">
+                <div class="img">
+                    <img src="./img/services/tipper.png" alt="Аренда самосвала">
+                </div>
+                <div class="title">
+                    Аренда самосвала
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <div class="img">
+                    <img src="./img/services/loader.png" alt="Аренда спецтехники">
+                </div>
+                <div class="title">
+                    Аренда спецтехники
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <div class="card">
+                <div class="img">
+                    <img src="./img/services/digger.png" alt="Рытье траншеи">
+                </div>
+                <div class="title">
+                    Рытье траншеи
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="map">
+    <div id="map"></div>
+
+    <div class="contact" id="contact">
+        <h3>Контакты</h3>
+        <p>
+            <span class="icon">
+
+            </span>
+            <span class="contact-content phone">
+                <a href="tel:8800034-23-34">8 800 034-23-34</a>
+                <a href="tel:8495034-23-34">8 495 034-23-34</a>
+            </span>
+
+        </p>
+        <p>
+            <span class="icon">
+
+            </span>
+            <span class="contact-content address">
+                Московская обл. г. Балашиха,
+                пер. Столовой, д.23, кор. 34
+            </span>
+        </p>
+        <p>
+            <span class="icon">
+
+            </span>
+            <span class="contact-content">
+                            <a href="mailto:Info@stroika.ru">Info@stroika.ru</a>
+            </span>
+        </p>
+    </div>
+</section>
+
+<footer class="footer" id="footer">
+    <div class="logo">
+        <div class="logo_cont">
+            <div class="logo__img">
+                <img src="./img/logo-white.png" alt="Logo">
+            </div>
+            <div class="logo__text">
+                <div class="text">
+                    granit
+                </div>
+                <div class="subtext">
+                    Доставка нерудных материалов
+                </div>
+            </div>
+        </div>
+        <div class="no-logo">
+            © 2019. Все права защищены.
+        </div>
+    </div>
+    <div class="connection">
+        <div class="connection__info">
+            <div class="tel ">
+                <a href="tel:88003421333">8 800 342-13-33</a>
+                <div class="subtext">
+                    Бесплатный звонок по России
+                </div>
+            </div>
+        </div>
+        <div class="connection__btn">
+            <button class="btn btn-black openModal">Обратный звонок</button>
+        </div>
+    </div>
+</footer>
+
+<div class="modal" id="modal">
+    <div class="btn-close">
+        <button class="close" id="closeModal"></button>
+    </div>
+    <div class="window">
+        <div class="callback">
+            <h2>
+                Мы позвоним вам за 30 минут
+            </h2>
+            <form name="callback" class="form" action="" id="callBack">
+                <input class="input" type="tel" name="phone" id="numberPhone" placeholder="Ваш телефон">
+                <textarea class="textarea" name="comment" id="numberComment" cols="30" rows="3"
+                          placeholder="Любые пожелания"></textarea>
+                <button class="btn btn-yellow" type="submit">Мы вам перезвоним</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<script src="./js/jQuery.min.js"></script>
+<script src="./js/jquery.maskedinput.min.js"></script>
+<script src="./js/script.js"></script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJdnBAWXPCh2IqA8-uMBKFvXasTJa6l-w&amp;callback=initMap"
+        async="" defer=""></script>
+
+<script src="./js/map.js"></script>
+
+</body>
+</html>
