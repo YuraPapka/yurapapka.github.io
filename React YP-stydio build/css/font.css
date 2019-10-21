@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Avenir-Black';
+    src: local('Avenir'),
+    local('Avenir Black'),
+    local('Avenir-Black'),
+    url('../font/Avenir-Black.eot'),
+    url('../font/Avenir-Black.eot?#iefix') format('embedded-opentype'),
+    url('../font/Avenir-Black.woff') format('woff'),
+    url('../font/Avenir-Black.woff2') format('woff2'),
+    url('../font/Avenir-Black.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir-Heavy';
+    src: local('Avenir'),
+    local('Avenir Heavy'),
+    local('Avenir-Heavy'),
+    url('../font/Avenir-Heavy.eot'),
+    url('../font/Avenir-Heavy.eot?#iefix') format('embedded-opentype'),
+    url('../font/Avenir-Heavy.woff') format('woff'),
+    url('../font/Avenir-Heavy.woff2') format('woff2'),
+    url('../font/Avenir-Heavy.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir-Medium';
+    src: local('Avenir'),
+    local('Avenir Medium'),
+    local('Avenir-Medium'),
+    url('../font/Avenir-Medium.eot'),
+    url('../font/Avenir-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../font/Avenir-Medium.woff') format('woff'),
+    url('../font/Avenir-Medium.woff2') format('woff2'),
+    url('../font/Avenir-Medium.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirNext-Bold';
+    src: local('AvenirNext'),
+    local('AvenirNext Bold'),
+    local('AvenirNext-Bold'),
+    url('../font/AvenirNext-Bold.eot'),
+    url('../font/AvenirNext-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../font/AvenirNext-Bold.woff') format('woff'),
+    url('../font/AvenirNext-Bold.woff2') format('woff2'),
+    url('../font/AvenirNext-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: Bold;
+}
